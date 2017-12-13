@@ -1,0 +1,12 @@
+#content {
+  
+}
+
+#content h1 {
+  text-align: center !important;
+}
+
+#content p{
+  text-align: justify;
+  background-color: #F5F7F8;
+}

@@ -1,18 +1,50 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {
+  HttpModule,
+  ConnectionBackend,
+  RequestOptions,
+  RequestOptionsArgs,
+  Response,
+  Headers,
+  Request,XHRBackend
+} from '@angular/http';
+import { RouterModule } from '@angular/router';
+import {SlimLoadingBarModule} from 'ng2-slim-loading-bar';
+import {SlimLoadingBarService} from 'ng2-slim-loading-bar';
 
 
+import { HttpInterceptor } from './common/services/HttpInterceptor';
+import { appRoutes } from './routing';
+import { LayoutModule } from './layout/layout.module';
 import { AppComponent } from './app.component';
-
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LayoutModule,
+    RouterModule.forRoot(
+      appRoutes
+    ),
+    HttpModule,
+    SlimLoadingBarModule.forRoot(),
   ],
-  providers: [],
+  exports: [SlimLoadingBarModule],
+  providers: [
+    {
+      provide: HttpInterceptor,
+      useFactory:httpFactory, 
+      deps:[XHRBackend,RequestOptions,SlimLoadingBarService]
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function httpFactory(backend: XHRBackend, defaultOptions: RequestOptions, slimbarservice:SlimLoadingBarService) {
+  return  new HttpInterceptor(backend, defaultOptions, slimbarservice);
+}
