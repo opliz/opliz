@@ -1,14 +1,38 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Opliz</title>
+  <title>odxpo</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
+  <link href="assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <link href="assets/css/style.css" rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="assets/css/lightbox.css">
+  <script src="assets/js/jquery-1.11.1.min.js"> </script>
 </head>
 <body>
   <app-root></app-root>
+  <!-- script-for-menu -->
+  <script>
+    $(function(){
+      $( "span.menu" ).click(function() {
+        $( "ul.nav1" ).slideToggle( 300, function() {
+            // Animation complete.
+        });
+      });
+    });
+    
+    $(function(){
+      var t=window.location.href;
+      $(".nav1 a").each(function(){
+        if(this.href==t) {
+          $(this).addClass("active");
+        }
+      });
+    });
+  </script>
+  <!-- /script-for-menu -->
+  <script src="assets/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>
