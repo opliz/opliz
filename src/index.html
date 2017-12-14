@@ -6,33 +6,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="icon" type="image/x-icon" href="favicon.png" />
-  <link href="assets/css/bootstrap.css" rel='stylesheet' type='text/css' />
-  <link href="assets/css/style.css" rel='stylesheet' type='text/css' />
-  <link rel="stylesheet" href="assets/css/lightbox.css">
-  <script src="assets/js/jquery-1.11.1.min.js"> </script>
+  <meta content='text/html;charset=UTF-8' http-equiv='Content-Type'/>
+  <link rel="stylesheet" type="text/css" href="assets/css/site/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/site/desktop.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/site/phone.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery.qtip.css">
+  
+  <script src='assets/js/site/jquery.min.js'></script>
+  <script src="assets/js/jquery.qtip.js"></script>
+  <script src='assets/js/site/jquery.bootpag.min.js'></script>
+  <script src="assets/js/site/labelthumbs.js"></script>
+  <script src="assets/js/site/jquery.ticker.js"></script>
+  <script src="assets/js/site/site.js"></script>
+  
+  <link rel="stylesheet" type="text/css" href="assets/css/site/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/site/ticker-style.css">
 </head>
 <body>
-  <app-root></app-root>
-  <!-- script-for-menu -->
-  <script>
-    $(function(){
-      $( "span.menu" ).click(function() {
-        $( "ul.nav1" ).slideToggle( 300, function() {
-            // Animation complete.
-        });
-      });
-    });
-    
-    $(function(){
-      var t=window.location.href;
-      $(".nav1 a").each(function(){
-        if(this.href==t) {
-          $(this).addClass("active");
+  <div id='outer-wrapper'>
+    <app-root></app-root>
+    <script>
+      $(document).ready(function(){
+        if($(".btn-top").length > 0){
+          $(window).scroll(function () {
+            var e = $(window).scrollTop();
+            if (e > 300) {
+              $(".btn-top").show()
+            } else {
+              $(".btn-top").hide()
+            }
+          });
+          $(".btn-top").click(function () {
+            $('body,html').animate({
+              scrollTop: 0
+            })
+          })
         }
       });
-    });
-  </script>
-  <!-- /script-for-menu -->
-  <script src="assets/js/lightbox-plus-jquery.min.js"></script>
+    </script>
+    <script>
+      $(document).ready(function() {
+        $('.ticker').ticker();
+      });
+    </script>
+  </div>
 </body>
 </html>

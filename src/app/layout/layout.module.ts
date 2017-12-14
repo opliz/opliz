@@ -13,11 +13,13 @@ import { RouterModule } from '@angular/router';
 
 import { HomeLayoutComponent } from './home/home-layout.component';
 import { ContentLayoutComponent } from './content/content-layout.component';
-import { HomeComponent } from '../components/home/home.component';
 import { HeaderComponent } from './header.component';
 import { FooterComponent } from './footer.component';
-import { SidebarComponent } from './sidebar.component';
+import { SliderComponent } from './slider.component';
+import { LeftSidebarComponent } from './left-sidebar.component';
+import { RightSidebarComponent } from './right-sidebar.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
+import { HomeComponent } from '../components/home/home.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ContactComponent } from '../components/contact/contact.component';
 import { TestComponent } from '../components/test/test.component';
@@ -45,8 +47,10 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
     HomeLayoutComponent,
     ContentLayoutComponent,
     HeaderComponent,
+    SliderComponent,
+    LeftSidebarComponent,
+    RightSidebarComponent,
     FooterComponent,
-    SidebarComponent,
     PageNotFoundComponent,
     HomeComponent,
     AboutComponent,

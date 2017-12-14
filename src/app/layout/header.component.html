@@ -1,31 +1,84 @@
-<!-- banner -->
-<div class="banner a-banner">
-  <!-- container -->
-  <div class="container">
-    <div class="header">
-      <div class="logo">
-        <a href="/">opliz</a>
+<div class='mfmenu' style='display: none;'>
+  <span class='mfrmenu'>
+    <select class='genrebox'>
+      <option value=''>Thể loại :</option>
+      <option value='#'>TEST 1</option>
+      <option value='#'>TEST 2</option>
+      <option value='#'>TEST 3</option>
+    </select>
+    <span class='ranpost'>
+      <a onclick='feelingLucky();' title='Feeling Lucky'><i class='fontawesome-random'></i></a>
+    </span>
+  </span>
+  <div id="logo">
+    <a href='/'>
+      <img alt="logo" src="assets/img/site/logo.png" />
+    </a>
+  </div>
+  <form action='/truyen-tranh/search' class='search-form' method="GET">
+    <input class='search-input' name='search_query'
+      placeholder='Tìm kiếm truyện...'
+      type='text'/>
+    <input class='search-submit' type='submit' value='GO' />
+  </form>
+  <span class='clear'></span>
+</div>
+<header id='header' class='hidden-small'>
+  <div class='header section' id='header_widget'>
+    <div class='widget Header' data-version='1' id='Header1'>
+      <div id='header-inner'>
+        <h1>
+          <a href='/'
+            style='display: block'> <img
+            alt='manganhatban.com' height='200px; '
+            id='Header1_headerimg'
+            src='assets/img/site/bg_header.png'
+            style='display: block'
+            title='Manga' width='100%; ' />
+          </a>
+        </h1>
       </div>
-      <div class="icons">
-        <ul>
-          <li><a href="#" class="facebook"> </a></li>
-          <li><a href="#" class="facebook twitter"> </a></li>
-          <li><a href="#" class="facebook chrome"> </a></li>
-          <li><a href="#" class="facebook dribbble"> </a></li>
-        </ul>
-      </div>
-      <div class="clearfix"> </div>
-    </div>
-    <div class="top-nav">
-        <span class="menu">MENU</span>
-        <ul class="nav1">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/test">Test</a></li>
-        </ul>
     </div>
   </div>
-  <!-- //container -->
-</div>  
-<!-- //banner -->
+  <div class='clear'></div>
+</header>
+<nav id="nav">
+  <ul class='fnav' id='fnav'>
+    <li class="primary-menu">
+      <a class='home' href='/' title='Home'>
+        <span class="hide">Home</span>
+        <span class='fontawesome-home'></span>
+      </a>
+    </li>
+    <li class="multi-menu">
+      <a id="truyen-tranh-menu" class="top-menu" href='/truyen-tranh/trang-1' title='Truyện Tranh'>Truyện tranh
+        <span class='fontawesome-sort-down idrop'></span>
+      </a>
+      <ul class='dropdown'>
+        <li class="secondary-menu"><a href='#' title='titele'>TEST1</a></li>
+        <li class="secondary-menu"><a href='#' title='titele'>TEST2</a></li>
+        <li class="secondary-menu"><a href='#' title='titele'>TEST3</a></li>
+      </ul>
+    </li>
+    <li class="primary-menu"><a href='/about' title='About'>About</a></li>
+    <span class="clear"></span>
+  </ul>
+  <span class='fmenu'>
+    <form action="/truyen-tranh/search" class="search-form" method="GET">
+      <input class='search-input' name='search_query'
+        onblur='if (this.value == "") {this.value = "Tìm kiếm truyện...";}'
+        onfocus='if (this.value == "Tìm kiếm truyện...") {this.value = ""}'
+        type='text' value='Tìm kiếm truyện...' />
+      <input class='search-submit' type='submit' value='GO' />
+    </form>
+    <select class='genrebox'>
+      <option value=''>Thể loại :</option>
+      <option value='#'>TEST1</option>
+      <option value='#'>TEST2</option>
+      <option value='#'>TEST3</option>
+    </select>
+    <span class="ranpost"><a onclick='feelingLucky();' title='Feeling Lucky'><i class='fontawesome-random'></i></a></span>
+    <span class="clear"></span>
+  </span>
+  <span class="clear"></span>
+</nav>

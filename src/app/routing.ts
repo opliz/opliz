@@ -1,5 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 import { HomeLayoutComponent } from './layout/home/home-layout.component';
+import { ContentLayoutComponent } from './layout/content/content-layout.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';

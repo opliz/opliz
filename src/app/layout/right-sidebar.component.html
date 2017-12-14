@@ -1,0 +1,59 @@
+<div id="sidebar" class="sidebar section">
+  <div class="widget HTML" data-version="1" id="HTML6">
+    <h2 class="title">
+      Social network
+    </h2>
+    <div class="widget-content">
+      <ul class="social-icons">
+        <li class="facebook">
+          <a href="#">Facebook</a>
+        </li>
+        <li class="googleplus">
+          <a href="#">Google+</a>
+        </li>
+        <li class="twitter">
+          <a href="#">Twitter</a>
+        </li>
+        <li class="linkedin">
+          <a href="#">Linkedin</a>
+        </li>
+        <li class="youtube">
+          <a href="#">YouTube</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="widget HTML" data-version="1" id="HTML6">
+    <h2 class="title">Facebook
+      <span class="fontawesome-facebook"></span>
+    </h2>
+    <div class="widget-content">
+      
+    </div>
+  </div>
+  <div class="widget Label tag" data-version="1" id="Label1">
+    <h2>Thể loại
+      <span class="fontawesome-bookmark"></span>
+    </h2>
+    <div class="widget-content list-label-widget-content">
+      <ul id="manga-type">
+        <li>
+          <a dir="ltr" href="#">Test 1</a>
+          <a dir="ltr" href="#">Test 2</a>
+          <a dir="ltr" href="#">Test 3</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  var url = window.location.href;
+  $("ul#manga-type li a").each(function() {
+    var menuUrl = this.href;
+    var lastSlashMenuIndex = menuUrl.lastIndexOf("/");
+    var checkUrl = menuUrl.substring(0, lastSlashMenuIndex);
+    if(url.indexOf(checkUrl) !== -1) {
+      $(this).closest("li").addClass("side-bar-active");
+    }
+  });
+</script>

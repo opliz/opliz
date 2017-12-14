@@ -1,0 +1,438 @@
+/* styles for desktop */
+.tinynav {
+	display: none;
+} /* styles for mobile */
+@media screen and (max-width:580px) {
+	.tinynav {
+		display: inline-block;
+	}
+	.fnav {
+		display: none;
+	}
+	.ranpost {
+		display: none;
+	}
+}
+
+@media screen and (max-width:480px) {
+	.mfmenu {
+		display: block !important;
+	}
+	.fmenu {
+		display: none;
+	}
+	.credit span:nth-child(2) {
+		clear: both;
+		float: none !important;
+	}
+	.mfmenu .search-form {
+		margin: 0;
+		display: block;
+		width: calc(100% - 105px);
+		position: relative;
+		float: left;
+		padding-right: 5px;
+	}
+	.mfmenu .search-input {
+		width: 95%;
+		margin-left: 1px;
+	}
+	.mfmenu .search-submit {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.mfmenu .genrebox {
+		display: block;
+		width: 100%;
+	}
+	#outer-wrapper {
+		width: 95%;
+		padding: 1%;
+	}
+	.ranpost {
+		display: none;
+	}
+	.tinynav {
+		display: inline-block;
+	}
+	.fnav {
+		display: none;
+	}
+	.tinynav {
+		display: inline-block;
+		width: 97%;
+		background: #e74c3c;
+		border: 0;
+		color: #fff;
+		padding: 6px;
+		font-weight: 700;
+		float: left;
+		margin: 5px;
+		outline: 0;
+	}
+	.rdpost li .rdthumbs img {
+		width: 100%;
+	}
+	.rdpost li {
+		width: 16.1%;
+		max-height: 200px;
+		height: inherit;
+		margin-right: 2px;
+	}
+	.rdtitle a {
+		width: 100%;
+	}
+	#content-side {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.cside {
+		margin-right: 0 !important;
+	}
+	#main-wrapper {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.sidebar {
+		margin-left: 0 !important;
+	}
+	#sidebar-wrapper {
+		float: none;
+		width: 100%;
+		clear: both;
+	}
+	.foot .widget {
+		float: none;
+		width: 100%;
+	}
+	#content-wrap {
+		float: none;
+		width: 100% !important;
+		margin: 5px 0;
+	}
+	#contentanime {
+		display: none;
+	}
+	#footer-wrap .widget {
+		clear: both;
+	}
+}
+
+@media screen and (min-width:530px)and (max-width:620px) {
+	.tinynav {
+		width: 27%;
+	}
+}
+
+@media screen and (min-width:480px)and (max-width:620px) {
+	#content-side {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	#content-wrap {
+		float: none;
+		width: 100% !important;
+		margin: 10px 0
+	}
+	.cside {
+		margin-right: 0 !important;
+	}
+	.mfmenu {
+		display: block !important;
+	}
+	#nav {
+		display: none !important;
+	}
+}
+
+@media screen and (min-width:480px)and (max-width:530px) {
+	.tinynav {
+		width: 97%;
+		padding: 1%;
+	}
+	.fmenu {
+		float: none;
+		width: 97%;
+		margin: 5px;
+	}
+	.search-form {
+		width: 70%;
+		position: relative;
+	}
+	.search-input {
+		width: 95%;
+	}
+	.search-submit {
+		position: absolute;
+		right: 0;
+	}
+}
+
+@media screen and (min-width:480px)and (max-width:620px) {
+	#outer-wrapper {
+		width: 94%;
+		padding: 1%;
+	}
+	.ranpost {
+		/*display: none;*/
+		float: right;
+	}
+	.tinynav {
+		display: inline-block;
+	}
+	.fnav {
+		display: none;
+	}
+	.tinynav {
+		display: inline-block;
+		background: #e74c3c;
+		border: 0;
+		color: #fff;
+		padding: 6px;
+		font-weight: 700;
+		float: left;
+		margin: 5px;
+		outline: 0;
+	}
+	.rdpost li .rdthumbs img {
+		width: 100%;
+	}
+	.rdpost li {
+		width: 16.1%;
+		max-height: 200px;
+		height: inherit;
+		margin-right: 2px;
+	}
+	.rdtitle a {
+		width: 100%;
+	}
+	#main-wrapper {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	#sidebar-wrapper {
+		float: none;
+		width: 100%;
+		clear: both;
+	}
+	.foot .widget {
+		float: none;
+		width: 100%;
+	}
+	.search-form {
+		float: left;
+		width: calc(100% - 261px);
+	}
+	.mfrmenu {
+		float: right;
+	}
+	.genrebox {
+		margin-right: 2px;
+		width: 120px;
+	}
+	.search-input {
+		width: calc(100% - 52px);
+	}
+	.search-submit {
+		float: right;
+	}
+	.sidebar {
+		margin-left: 0;
+	}
+}
+
+@media screen and (min-width:690px)and (max-width:770px) {
+	#content-side {
+		/*width: 22%;*/
+		width: 25%;
+		display: inline-block !important;
+	}
+	#content-wrap {
+		width: 100% !important;
+		margin-right: 5px
+	}
+	#sidebar-wrapper {
+		width: 25% !important
+	}
+}
+
+@media screen and (min-width:620px)and (max-width:690px) {
+	#content-wrap {
+		width: 60% !important;
+		margin-right: 5px
+	}
+	#sidebar-wrapper {
+		width: 39% !important;
+		float: left !important
+	}
+}
+
+@media screen and (min-width:620px)and (max-width:770px) {
+	#outer-wrapper {
+		width: 95%;
+	}
+	#content-side {
+		display: none;
+	}
+	#sidebar-wrapper {
+		width: 100%;
+	}
+	#sidebar-wrapper .sidebar .widget {
+		display: inline-block;
+		width: 100%;
+	}
+	.foot .widget {
+		width: 31%;
+	}
+	#nav>ul>li>a {
+		padding: 12px 10px;
+	}
+	#nav>ul>li:first-child>a {
+		padding: 10px 15px;
+	}
+	#main-wrapper {
+		float: none;
+		width: inherit;
+		margin: 0;
+	}
+	.fmenu {
+		display: none;
+	}
+	.mfmenu .search-submit {
+		padding: 10px;
+		position: absolute;
+		top: -1px;
+		right: -13px;
+	}
+	.mfmenu .search-input {
+		width: 100%;
+	}
+	.mfmenu .search-form {
+		width: calc(100% - 307px);
+		position: relative;
+		margin: 0 15px 0 0;
+		float: right;
+	}
+	.mfmenu {
+		display: block !important;
+		margin-bottom: 3px;
+	}
+	.mfrmenu {
+		float: right;
+		/*width: 192px;*/
+		display: flex;
+	}
+	.mfmenu .genrebox {
+		width: 150px;
+		position: relative;
+		/*top: -2px;*/
+		padding: 9px 5px;
+		margin-right: 2px;
+	}
+	.mfmenu .ranpost {
+		float: none;
+	}
+	.rdpost li .rdthumbs img {
+		width: 100%;
+	}
+	.rdpost li {
+		width: 16.1%;
+		max-height: 200px;
+		height: inherit;
+		margin-right: 3px;
+	}
+	.rdtitle a {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width:770px)and (max-width:890px) {
+	#outer-wrapper {
+		width: 95%;
+	}
+	#nav>ul>li>a {
+		padding: 12px 10px;
+	}
+	#nav>ul>li:first-child>a {
+		padding: 10px 15px;
+	}
+	#content-side {
+		width: 25%;
+	}
+	#sidebar-wrapper {
+		width: 25%;
+	}
+	#main-wrapper {
+		float: none;
+		width: inherit;
+		margin: 0;
+	}
+	#content-wrap {
+		width: 55% !important;
+		margin-right: 7px;
+		float: left;
+	}
+	.ranpost {
+		/*display: none;*/
+	}
+	.genrebox {
+		width: 120px;
+	}
+	.foot .widget {
+		width: 31%;
+	}
+	.rdpost li .rdthumbs img {
+		width: 100%;
+	}
+	.rdpost li {
+		width: 16.1%;
+		max-height: 180px;
+	}
+	#header {
+		display: block !important;
+	}
+}
+
+@media screen and (min-width:890px)and (max-width:1024px) {
+	#outer-wrapper {
+		width: 95%;
+	}
+	#main-wrapper {
+		/*width: 74%;*/
+		margin-right: 8px;
+	}
+	#sidebar-wrapper {
+		width: 25%;
+	}
+	#content-side {
+		width: 25%;
+	}
+	#content-wrap {
+		width: 100% !important
+	}
+	.rdpost li {
+		width: 16%;
+	}
+	.fmenu {
+		width: 41%;
+		display: flex;
+		margin-right: 2px;
+	}
+	.foot .widget {
+		width: 32%;
+	}
+	.genrebox {
+		/*width: 25%;*/
+	}
+	.search-input {
+		width: 75%;
+	}
+	.search-form {
+		width: 59%;
+	}
+}
