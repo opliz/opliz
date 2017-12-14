@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.widget-content > p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.widget-content > img {
+  display: block;
+  margin: auto;
+}
