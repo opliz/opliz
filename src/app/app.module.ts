@@ -18,7 +18,6 @@ import { HttpInterceptor } from './common/services/HttpInterceptor';
 import { appRoutes } from './routing';
 import { LayoutModule } from './layout/layout.module';
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
