@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  api : "http://abcxyz.com"
+  api : "http://app-encee.7e14.starter-us-west-2.openshiftapps.com"
 };
