@@ -6,17 +6,9 @@
       </h2>
       <div class="widget-content">
         <ul class="lst_wrap">
-          <li class="clearfix"><a class="lst_title"
-            href="#"
-            target="_top">Truyen 1 - Chapter 1</a> <br> <span class="clear"></span>
-          </li>
-          <li class="clearfix"><a class="lst_title"
-            href="#"
-            target="_top">Truyen 1 - Chapter 2</a> <br> <span class="clear"></span>
-          </li>
-          <li class="clearfix"><a class="lst_title"
-            href="#"
-            target="_top">Truyen 1 - Chapter 3</a> <br> <span class="clear"></span>
+          <li class="clearfix" *ngFor="let item of chapters">
+            <a class="lst_title" href="#" target="_top">{{item.chapterName}}</a>
+            <br> <span class="clear"></span>
           </li>
         </ul>
       </div>
@@ -28,33 +20,12 @@
       </h2>
       <div class="widget-content">
         <ul class="lst_wrap">
-          <li class="clearfix"><a class="lst_title"
-            href="#"
-            target="_top">Truyen 1</a> <br> <span class="clear"></span>
-          </li>
-          <li class="clearfix"><a class="lst_title"
-            href="#"
-            target="_top">Truyen 2</a> <br> <span class="clear"></span>
-          </li>
-          <li class="clearfix"><a class="lst_title"
-            href="#"
-            target="_top">Truyen 3</a> <br> <span class="clear"></span>
+          <li class="clearfix" *ngFor="let item of stories">
+            <a class="lst_title" href="#" target="_top">{{item.storyName}}</a>
+            <br> <span class="clear"></span>
           </li>
         </ul>
       </div>
-    </div>
-  </div>
-
-  <div class="widget HTML" id="HTML2">
-    <h2 class="title">
-      <span class="fontawesome-reorder"></span> TEST
-    </h2>
-    <div class="widget-content">
-      <ul>
-        <li *ngFor="let item of chapters">
-          <p>TEST</p>
-        </li>
-      </ul>
     </div>
   </div>
 </div>

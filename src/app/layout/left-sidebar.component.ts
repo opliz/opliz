@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LeftSidebarService } from './left-sidebar.service';
 import { Chapter } from '../common/beans/chapter';
+import { Story } from '../common/beans/story';
 
 @Component({
   selector: 'layout-left-sidebar',
@@ -8,18 +9,27 @@ import { Chapter } from '../common/beans/chapter';
 })
 export class LeftSidebarComponent implements OnInit {
   chapters : Chapter[];
+  stories : Story[];
   constructor(private leftSidebarService : LeftSidebarService) {
 
   }
 
   ngOnInit() {
-    this.loadTopChapter();
+    this.loadTopChapters();
+    this.loadPopularStories();
   }
 
-  loadTopChapter() {
-    var request = this.leftSidebarService.getTopChapter().subscribe(result => {
+  loadTopChapters() {
+    var request = this.leftSidebarService.getTopChapters().subscribe(result => {
       this.chapters = new Array<Chapter>();
       this.chapters = result;
+    });
+  }
+
+  loadPopularStories() {
+    var request = this.leftSidebarService.getPopularStories().subscribe(result => {
+      this.stories = new Array<Story>();
+      this.stories = result;
     });
   }
 

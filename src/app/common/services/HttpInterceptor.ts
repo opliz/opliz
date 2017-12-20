@@ -34,7 +34,6 @@ export class HttpInterceptor extends Http {
    * @returns {Observable<>}
    */
   get(url: string, options?: RequestOptions): any {
-    console.log("TEST GET");
     this.beforeRequest();
     return super.get(url, options)
       .catch(this.onCatch)
@@ -51,9 +50,7 @@ export class HttpInterceptor extends Http {
   getHeaders() : RequestOptions {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-
     return new RequestOptions({headers : headers});
-
   }
 
   post(url: string, body: any, options?: RequestOptions): any {

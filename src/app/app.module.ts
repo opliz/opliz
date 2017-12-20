@@ -19,6 +19,7 @@ import { appRoutes } from './routing';
 import { LayoutModule } from './layout/layout.module';
 import { AppComponent } from './app.component';
 import { LeftSidebarService } from './layout/left-sidebar.service';
+import { RightSidebarService } from './layout/right-sidebar.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { LeftSidebarService } from './layout/left-sidebar.service';
   exports: [SlimLoadingBarModule],
   providers: [
     LeftSidebarService,
+    RightSidebarService,
     {
       provide: HttpInterceptor,
       useFactory:httpFactory, 
