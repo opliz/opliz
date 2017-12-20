@@ -8,8 +8,14 @@ import {
   Headers,
   Request
 } from '@angular/http';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/finally';
+import { Observable } from 'rxjs/Observable';
 // Shows Progress bar and notifications
 import { SlimLoadingBarService } from 'ng2-slim-loading-bar';
+
 @Injectable()
 export class HttpInterceptor extends Http {
 
@@ -19,6 +25,77 @@ export class HttpInterceptor extends Http {
     private slimbarservice: SlimLoadingBarService,
   ) {
     super(backend, defaultOptions);
+  }
+
+  /**
+   * Performs a request with `get` http method.
+   * @param url
+   * @param options
+   * @returns {Observable<>}
+   */
+  get(url: string, options?: RequestOptions): any {
+    console.log("TEST GET");
+    this.beforeRequest();
+    return super.get(url, options)
+      .catch(this.onCatch)
+      .do((res: Response) => {
+        this.onSuccess(res);
+      }, (error: any) => {
+        this.onError(error);
+      })
+      .finally(() => {
+        this.onFinally();
+      });
+  }
+
+  getHeaders() : RequestOptions {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    return new RequestOptions({headers : headers});
+
+  }
+
+  post(url: string, body: any, options?: RequestOptions): any {
+    this.beforeRequest();
+    return super.post(url, body, options)
+      .catch(this.onCatch)
+      .do((res: Response) => {
+        this.onSuccess(res);
+      }, (error: any) => {
+        this.onError(error);
+      })
+      .finally(() => {
+        this.onFinally();
+      });
+  }
+
+  delete(url: string, options?: RequestOptions): any {
+    this.beforeRequest();
+    return super.delete(url, options)
+      .catch(this.onCatch)
+      .do((res: Response) => {
+        this.onSuccess(res);
+      }, (error: any) => {
+        this.onError(error);
+      })
+      .finally(() => {
+        this.onFinally();
+      });
+  }
+
+  put(url: string, body: any, options?: RequestOptions): any {
+    this.beforeRequest();
+    return super.post(url, body, options)
+      .catch(this.onCatch)
+      .do((res: Response) => {
+        this.onSuccess(res);
+      }, (error: any) => {
+        this.onError(error);
+      })
+      .finally(() => {
+        this.onFinally();
+      });
   }
 
   /**
