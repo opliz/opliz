@@ -20,6 +20,7 @@ import { LayoutModule } from './layout/layout.module';
 import { AppComponent } from './app.component';
 import { LeftSidebarService } from './layout/left-sidebar.service';
 import { RightSidebarService } from './layout/right-sidebar.service';
+import { HeaderService } from './layout/header.service';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { RightSidebarService } from './layout/right-sidebar.service';
   ],
   exports: [SlimLoadingBarModule],
   providers: [
+    HeaderService,
     LeftSidebarService,
     RightSidebarService,
     {

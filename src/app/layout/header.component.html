@@ -2,13 +2,7 @@
   <span class='mfrmenu'>
     <select class='genrebox'>
       <option value=''>Thể loại :</option>
-      <option value='#'>Action</option>
-      <option value='#'>Adult</option>
-      <option value='#'>Adventure</option>
-      <option value='#'>Anime</option>
-      <option value='#'>Bender</option>
-      <option value='#'>Bishounen</option>
-      <option value='#'>Commedy</option>
+      <option *ngFor="let item of types" value='#'>{{item.typeName}}</option>
     </select>
     <span class='ranpost'>
       <a onclick='feelingLucky();' title='Feeling Lucky'><i class='fontawesome-random'></i></a>
@@ -59,9 +53,9 @@
         <span class='fontawesome-sort-down idrop'></span>
       </a>
       <ul class='dropdown'>
-        <li class="secondary-menu"><a href='#' title='titele'>Coming Soon</a></li>
-        <li class="secondary-menu"><a href='#' title='titele'>Ongoing</a></li>
-        <li class="secondary-menu"><a href='#' title='titele'>Full</a></li>
+        <li class="secondary-menu" *ngFor="let item of statuses">
+          <a href='#' title='titele'>{{item.statusName}}</a>
+        </li>
       </ul>
     </li>
     <li class="primary-menu"><a href='/test' title='Test'>Test</a></li>
@@ -79,13 +73,7 @@
     </form>
     <select class='genrebox'>
       <option value=''>Thể loại :</option>
-      <option value='#'>Action</option>
-      <option value='#'>Adult</option>
-      <option value='#'>Adventure</option>
-      <option value='#'>Anime</option>
-      <option value='#'>Bender</option>
-      <option value='#'>Bishounen</option>
-      <option value='#'>Commedy</option>
+      <option *ngFor="let item of types" value='#'>{{item.typeName}}</option>
     </select>
     <span class="ranpost"><a onclick='feelingLucky();' title='Feeling Lucky'><i class='fontawesome-random'></i></a></span>
     <span class="clear"></span>
