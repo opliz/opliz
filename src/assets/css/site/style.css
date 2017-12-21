@@ -10,6 +10,7 @@
 	margin: 1px 0 1px -2px;
 	border-bottom: 1px solid #d23828;
 	font-size: 12px;
+	margin-right: 4px;
 }
 
 .Label .widget-content li:hover {
