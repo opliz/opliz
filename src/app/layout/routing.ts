@@ -9,6 +9,7 @@ import { PageNotFoundComponent } from '../components/page-not-found/page-not-fou
 import { StoryComponent } from '../components/story/story.component';
 import { ChapterNormalViewerComponent } from '../components/chapter/chapter-normal-viewer/chapter-normal-viewer.component';
 import { TypeComponent } from '../components/type/type.component';
+import { StatusComponent } from '../components/status/status.component';
 
 const appRoute: Routes = [
     {
@@ -16,7 +17,7 @@ const appRoute: Routes = [
       children: [
         { path: '', component: HomeComponent, pathMatch : 'full' },
         { path: 'the-loai/:typeUrl-:typeId', component: TypeComponent},
-        { path: 'trang-thai/:statusUrl-:statusId', component: TypeComponent},
+        { path: 'trang-thai/:statusUrl-:statusId', component: StatusComponent},
         { path: 'about', component: AboutComponent},
         { path: 'contact', component: ContactComponent}
       ]
