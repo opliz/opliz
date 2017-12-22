@@ -23,6 +23,8 @@ import { HomeComponent } from '../components/home/home.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ContactComponent } from '../components/contact/contact.component';
 import { TestComponent } from '../components/test/test.component';
+import { StoryComponent } from '../components/story/story.component';
+import { ChapterNormalViewerComponent } from '../components/chapter/chapter-normal-viewer/chapter-normal-viewer.component';
 
 import { routing } from './routing';
 import {HttpInterceptor} from '../common/services/HttpInterceptor';
@@ -56,6 +58,8 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
     AboutComponent,
     ContactComponent,
     TestComponent,
+    StoryComponent,
+    ChapterNormalViewerComponent
   ]
 })
 export class LayoutModule {
