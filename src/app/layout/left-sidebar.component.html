@@ -7,7 +7,7 @@
       <div class="widget-content">
         <ul class="lst_wrap">
           <li class="clearfix" *ngFor="let chapter of chapters">
-            <a class="lst_title" href="truyen-tranh/{{chapter.story.storyUrl}}-{{chapter.story.storyId}}/{{chapter.chapterUrl}}-{{chapter.chapterId}}" target="_top">{{chapter.story.storyName}} - {{chapter.chapterName}}</a>
+            <a class="lst_title" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}" target="_top">{{chapter.story.storyName}} - {{chapter.chapterName}}</a>
             <br> <span class="clear"></span>
           </li>
         </ul>
@@ -21,7 +21,7 @@
       <div class="widget-content">
         <ul class="lst_wrap">
           <li class="clearfix" *ngFor="let story of stories">
-            <a class="lst_title" href="truyen-tranh/{{story.storyUrl}}-{{story.storyId}}" target="_top">{{story.storyName}}</a>
+            <a class="lst_title" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}" target="_top">{{story.storyName}}</a>
             <br> <span class="clear"></span>
           </li>
         </ul>

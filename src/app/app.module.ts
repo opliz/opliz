@@ -21,6 +21,7 @@ import { AppComponent } from './app.component';
 import { LeftSidebarService } from './layout/left-sidebar.service';
 import { RightSidebarService } from './layout/right-sidebar.service';
 import { HeaderService } from './layout/header.service';
+import { ChapterNormalViewerService } from './components/chapter/chapter-normal-viewer/chapter-normal-viewer.service';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { HeaderService } from './layout/header.service';
     HeaderService,
     LeftSidebarService,
     RightSidebarService,
+    ChapterNormalViewerService,
     {
       provide: HttpInterceptor,
       useFactory:httpFactory, 

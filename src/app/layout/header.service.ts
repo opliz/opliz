@@ -5,18 +5,18 @@ import { BaseService } from '../common/services/base.service';
 
 @Injectable()
 export class HeaderService extends BaseService {
-  urlStatus : string = Config.apiUrl + '/webservice/manga/status';
-  urlTypes : string = Config.apiUrl + '/webservice/manga/types';
+  urlStatusApi : string = Config.apiUrl + '/webservice/manga/status';
+  urlTypesApi : string = Config.apiUrl + '/webservice/manga/types';
 
   constructor(public http : HttpInterceptor) {
     super(http);
   }
 
   getStatuses() {
-    return this.http.get(this.urlStatus, this.getHeaders()).map((response: Response) => response.json());
+    return this.http.get(this.urlStatusApi, this.getHeaders()).map((response: Response) => response.json());
   }
 
   getTypes() {
-    return this.http.get(this.urlTypes, this.getHeaders()).map((response: Response) => response.json());
+    return this.http.get(this.urlTypesApi, this.getHeaders()).map((response: Response) => response.json());
   }
 }

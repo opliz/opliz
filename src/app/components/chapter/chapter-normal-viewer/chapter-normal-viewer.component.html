@@ -6,7 +6,7 @@
           <article class="post hentry">
             <div class="hwrap">
               <h2 class="title">
-                Truyen 1 - Chapter 1
+                {{chapter.story.storyName}} : {{chapter.chapterName}}
                 <span class="fontawesome-reorder"></span>
                 <span class="hidden-small">
                   <a style="padding-right: 5px; color: #e74c3c;" href="#">Xem truyện ở dạng nâng cao</a>
@@ -15,13 +15,7 @@
             </div>
             <div class="post-body entry-content">
               <div>
-                <img alt="test" src="assets/img/view/cover.jpg">
-                <img alt="test" src="assets/img/admin/picture2.jpg">
-                <img alt="test" src="assets/img/admin/picture2.jpg">
-                <img alt="test" src="assets/img/admin/picture2.jpg">
-                <img alt="test" src="assets/img/admin/picture2.jpg">
-                <img alt="test" src="assets/img/admin/picture2.jpg">
-                <img alt="test" src="assets/img/view/cover.jpg">
+                <img *ngFor="let page of chapter.pageDetail" alt="test" src="{{page.pageContent}}">
               </div>
               <div class="clear"></div>
               <div class="synop_down">

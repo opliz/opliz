@@ -16,8 +16,8 @@ const appRoute: Routes = [
       path: '', component: HomeLayoutComponent,
       children: [
         { path: '', component: HomeComponent, pathMatch : 'full' },
-        { path: 'the-loai/:typeUrl-:typeId', component: TypeComponent},
-        { path: 'trang-thai/:statusUrl-:statusId', component: StatusComponent},
+        { path: 'the-loai/:typeUrl/:typeId', component: TypeComponent},
+        { path: 'trang-thai/:statusUrl/:statusId', component: StatusComponent},
         { path: 'about', component: AboutComponent},
         { path: 'contact', component: ContactComponent}
       ]
@@ -25,8 +25,8 @@ const appRoute: Routes = [
     {
       path: '', component: ContentLayoutComponent,
       children: [
-        { path: 'truyen-tranh/:storyUrl-:storyId', component: StoryComponent},
-        { path: 'truyen-tranh/:storyUrl-:storyId/:chapterUrl-:chapterId', component: ChapterNormalViewerComponent}
+        { path: 'truyen-tranh/:storyUrl/:storyId', component: StoryComponent},
+        { path: 'truyen-tranh/:storyUrl/:chapterUrl/:chapterId', component: ChapterNormalViewerComponent}
       ]
     },
     {
