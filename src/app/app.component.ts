@@ -9,5 +9,4 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AppComponent {
   title = 'app';
-  test = "test";
 }
