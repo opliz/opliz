@@ -22,9 +22,10 @@ import { PageNotFoundComponent } from '../components/page-not-found/page-not-fou
 import { HomeComponent } from '../components/home/home.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ContactComponent } from '../components/contact/contact.component';
-import { TestComponent } from '../components/test/test.component';
 import { StoryComponent } from '../components/story/story.component';
 import { ChapterNormalViewerComponent } from '../components/chapter/chapter-normal-viewer/chapter-normal-viewer.component';
+import { TypeComponent } from '../components/type/type.component';
+import { StatusComponent } from '../components/status/status.component';
 
 import { routing } from './routing';
 import {HttpInterceptor} from '../common/services/HttpInterceptor';
@@ -57,9 +58,10 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    TestComponent,
     StoryComponent,
-    ChapterNormalViewerComponent
+    ChapterNormalViewerComponent,
+    TypeComponent,
+    StatusComponent
   ]
 })
 export class LayoutModule {
