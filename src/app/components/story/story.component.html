@@ -6,15 +6,57 @@
           <article class="post hentry">
             <div class="hwrap">
               <h2 class="title">
-                Truyen 1 - Chapter 1
+                {{story.storyName}}
                 <span class="fontawesome-reorder"></span>
-                <span class="hidden-small">
-                  <a style="padding-right: 5px; color: #e74c3c;" href="#">Xem truyện ở dạng nâng cao</a>
-                </span>
               </h2>
             </div>
             <div class="post-body entry-content">
 
+
+              <div class="synop_top">
+                <div class="synop_thumbs">
+                  <img alt="" src="{{story.storyCoverImageUrl}}">
+                </div>
+                <ul class="synop_infs">
+                  <li>
+                    <b>Trạng thái:</b>
+                    <span>{{story.status.statusName}}</span>
+                  </li>
+                  <li>
+                    <b>Tác giả:</b>
+                    <span>{{story.storyAuthor}}</span>
+                  </li>
+                  <li>
+                    <b>Thể loại:</b>
+                    <span class="lst_type">
+                      <a href="#">Type 1<span>, </span></a>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div class="clear"></div>
+              <div class="synop_down">
+                  <table>
+                    <thead>
+                      <tr>
+                        <td>
+                          Tập
+                        </td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <td>
+                            <a href="#">Chap 1</a>
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                <div class="description">
+                  {{story.storyDescription}}
+                </div>
+                <div style="clear: both;"></div>
+              </div>
 
               
             </div>

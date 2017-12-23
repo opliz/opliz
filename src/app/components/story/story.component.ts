@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router ,ActivatedRoute} from '@angular/router';
+import { Story } from '../../common/beans/story';
+import { StoryService } from './story.service';
 
 @Component({
   selector: 'app-story',
@@ -6,10 +9,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./story.component.css']
 })
 export class StoryComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  storyId : number;
+  activeIdSub: any;
+  story : Story;
+  constructor(private storyService : StoryService, private router: Router,private route: ActivatedRoute) {
+    this.activeIdSub = this.route.params.subscribe(params => {
+      this.storyId = params['storyId'];
+      this.story = new Story();
+    });
   }
 
+  ngOnInit() {
+    this.loadStory();
+  }
+
+  loadStory() {
+    var request = this.storyService.getStoryById(this.storyId).subscribe(result => {
+      this.story = result;
+    });
+  }
 }

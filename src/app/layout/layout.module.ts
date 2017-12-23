@@ -26,6 +26,7 @@ import { StoryComponent } from '../components/story/story.component';
 import { ChapterNormalViewerComponent } from '../components/chapter/chapter-normal-viewer/chapter-normal-viewer.component';
 import { TypeComponent } from '../components/type/type.component';
 import { StatusComponent } from '../components/status/status.component';
+import { MoreComponent } from '../components/more/more.component';
 
 import { routing } from './routing';
 import {HttpInterceptor} from '../common/services/HttpInterceptor';
@@ -61,7 +62,8 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
     StoryComponent,
     ChapterNormalViewerComponent,
     TypeComponent,
-    StatusComponent
+    StatusComponent,
+    MoreComponent
   ]
 })
 export class LayoutModule {

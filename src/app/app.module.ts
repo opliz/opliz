@@ -23,6 +23,8 @@ import { RightSidebarService } from './layout/right-sidebar.service';
 import { HeaderService } from './layout/header.service';
 import { ChapterNormalViewerService } from './components/chapter/chapter-normal-viewer/chapter-normal-viewer.service';
 import { HomeService } from './components/home/home.service';
+import { StoryService } from './components/story/story.service';
+import { MoreService } from './components/more/more.service';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { HomeService } from './components/home/home.service';
     RightSidebarService,
     ChapterNormalViewerService,
     HomeService,
+    StoryService,
+    MoreService,
     {
       provide: HttpInterceptor,
       useFactory:httpFactory, 

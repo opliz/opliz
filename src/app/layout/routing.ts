@@ -10,12 +10,14 @@ import { StoryComponent } from '../components/story/story.component';
 import { ChapterNormalViewerComponent } from '../components/chapter/chapter-normal-viewer/chapter-normal-viewer.component';
 import { TypeComponent } from '../components/type/type.component';
 import { StatusComponent } from '../components/status/status.component';
+import { MoreComponent } from '../components/more/more.component';
 
 const appRoute: Routes = [
     {
       path: '', component: HomeLayoutComponent,
       children: [
         { path: '', component: HomeComponent, pathMatch : 'full' },
+        { path: 'more/:index', component: MoreComponent},
         { path: 'the-loai/:typeUrl/:typeId', component: TypeComponent},
         { path: 'trang-thai/:statusUrl/:statusId', component: StatusComponent},
         { path: 'about', component: AboutComponent},
