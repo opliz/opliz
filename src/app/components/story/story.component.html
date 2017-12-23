@@ -29,7 +29,7 @@
                   <li>
                     <b>Thể loại:</b>
                     <span class="lst_type">
-                      <a href="#">Type 1<span>, </span></a>
+                      <a *ngFor="let type of story.types" href="the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}<span>, </span></a>
                     </span>
                   </li>
                 </ul>
@@ -45,9 +45,9 @@
                       </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr *ngFor="let chapter of story.chapters">
                           <td>
-                            <a href="#">Chap 1</a>
+                            <a href="truyen-tranh/{{story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">{{chapter.chapterName}}</a>
                           </td>
                         </tr>
                     </tbody>

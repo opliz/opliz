@@ -14,15 +14,15 @@
                   <a class="lst_thmba" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">
                     <img alt="" src="{{chapter.story.storyCoverImageUrl}}" width="75px" height="100px">
                   </a>
-                  <a style="font-size: 13px; font-weight: 600;" id="tooltip-link-chapterId" class="lst_title" href="#">
+                  <a style="font-size: 13px; font-weight: 600;" id="tooltip-link-chapterId" class="lst_title" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">
                     {{chapter.chapterName}}
                   </a>
                   <br>
-                    <a class="lst_date" href="3">{{chapter.story.storyName}}</a>
+                    <a class="lst_date" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.story.storyId}}">{{chapter.story.storyName}}</a>
                   <br>
                   <abbr class="lst_type">
                     <b>Thể loại: </b> 
-                    <a href="#" *ngFor="let type of chapter.story.types">{{type.typeName}}<span>, </span></a>
+                    <a href="the-loai/{{type.typeUrl}}/{{type.typeId}}" *ngFor="let type of chapter.story.types">{{type.typeName}}<span>, </span></a>
                   </abbr>
                   <br>
                   <a class="lst_rdmr" href="#">
