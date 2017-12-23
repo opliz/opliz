@@ -7,8 +7,6 @@
           </h2>
           <div class="widget-content">
             <div class="lst_wrap">
-              
-
               <div class="clearfix" *ngFor="let chapter of chapters">
                 <div class="home_content">
                   <a class="lst_thmba" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">
@@ -22,7 +20,7 @@
                   <br>
                   <abbr class="lst_type">
                     <b>Thể loại: </b> 
-                    <a href="the-loai/{{type.typeUrl}}/{{type.typeId}}" *ngFor="let type of chapter.story.types">{{type.typeName}}<span>, </span></a>
+                    <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}" *ngFor="let type of chapter.story.types">{{type.typeName}}<span>, </span></a>
                   </abbr>
                   <br>
                   <a class="lst_rdmr" href="#">
@@ -31,8 +29,6 @@
                   <span class="clear"></span>
                 </div>
               </div>
-
-
             </div>
             <a class="mrpbt" href="">Xem thêm</a>
           </div>

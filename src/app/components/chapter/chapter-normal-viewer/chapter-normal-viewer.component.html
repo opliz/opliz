@@ -28,100 +28,15 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <tr *ngFor="let c of chapter.story.chapters">
                       <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 2</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 3</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 4</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <a href="#">Chapter 1</a>
+                        <a href="truyen-tranh/{{chapter.story.storyUrl}}/{{c.chapterUrl}}/{{c.chapterId}}">{{c.chapterName}}</a>
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <div class="description">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  {{chapter.story.storyDescription}}
                 </div>
                 <div style="clear: both;"></div>
               </div>

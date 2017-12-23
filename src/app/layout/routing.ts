@@ -18,8 +18,8 @@ const appRoute: Routes = [
       children: [
         { path: '', component: HomeComponent, pathMatch : 'full' },
         { path: 'more/:index', component: MoreComponent},
-        { path: 'the-loai/:typeUrl/:typeId', component: TypeComponent},
-        { path: 'trang-thai/:statusUrl/:statusId', component: StatusComponent},
+        { path: 'truyen-tranh/the-loai/:typeUrl/:typeId', component: TypeComponent},
+        { path: 'truyen-tranh/trang-thai/:statusUrl/:statusId', component: StatusComponent},
         { path: 'about', component: AboutComponent},
         { path: 'contact', component: ContactComponent}
       ]

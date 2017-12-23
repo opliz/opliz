@@ -2,7 +2,7 @@
   <span class='mfrmenu'>
     <select class='genrebox'>
       <option value=''>Thể loại :</option>
-      <option *ngFor="let type of types" value='the-loai/{{type.typeUrl}}/{{type.typeId}}'>{{type.typeName}}</option>
+      <option *ngFor="let type of types" value='truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}'>{{type.typeName}}</option>
     </select>
     <span class='ranpost'>
       <a onclick='feelingLucky();' title='Feeling Lucky'><i class='fontawesome-random'></i></a>
@@ -54,7 +54,7 @@
       </a>
       <ul class='dropdown'>
         <li class="secondary-menu" *ngFor="let status of statuses">
-          <a href='trang-thai/{{status.statusUrl}}/{{status.statusId}}' title='titele'>{{status.statusName}}</a>
+          <a href='truyen-tranh/trang-thai/{{status.statusUrl}}/{{status.statusId}}' title='titele'>{{status.statusName}}</a>
         </li>
       </ul>
     </li>
@@ -72,7 +72,7 @@
     </form>
     <select class='genrebox'>
       <option value=''>Thể loại :</option>
-      <option *ngFor="let type of types" value='the-loai/{{type.typeUrl}}/{{type.typeId}}'>{{type.typeName}}</option>
+      <option *ngFor="let type of types" value='truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}'>{{type.typeName}}</option>
     </select>
     <span class="ranpost"><a onclick='feelingLucky();' title='Feeling Lucky'><i class='fontawesome-random'></i></a></span>
     <span class="clear"></span>
