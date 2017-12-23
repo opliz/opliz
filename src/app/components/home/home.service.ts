@@ -6,7 +6,7 @@ import { BaseService } from '../../common/services/base.service';
 @Injectable()
 export class HomeService extends BaseService {
 
-  urlChaptersApi : string = Config.apiUrl + '/webservice/manga/chapters/list?page=1&size=20';
+  urlChaptersApi : string = Config.apiUrl + '/webservice/manga/chapters/list?page=1&size=10';
 
   constructor(public http : HttpInterceptor) {
     super(http);
