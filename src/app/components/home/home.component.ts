@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router ,ActivatedRoute} from '@angular/router';
+import { Chapter } from '../../common/beans/chapter';
+import { HomeService } from './home.service';
 
 @Component({
   selector: 'app-home',
@@ -7,10 +9,19 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  activeIdSub: any;
+  chapters : Array<Chapter>;
+  constructor(private homeService : HomeService) {
+  }
 
   ngOnInit() {
+    this.loadChapters();
+  }
+
+  loadChapters() {
+    var request = this.homeService.getChaptesBySize().subscribe(result => {
+      this.chapters = result;
+    });
   }
 
 }

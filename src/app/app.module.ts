@@ -22,6 +22,7 @@ import { LeftSidebarService } from './layout/left-sidebar.service';
 import { RightSidebarService } from './layout/right-sidebar.service';
 import { HeaderService } from './layout/header.service';
 import { ChapterNormalViewerService } from './components/chapter/chapter-normal-viewer/chapter-normal-viewer.service';
+import { HomeService } from './components/home/home.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ChapterNormalViewerService } from './components/chapter/chapter-normal-
     LeftSidebarService,
     RightSidebarService,
     ChapterNormalViewerService,
+    HomeService,
     {
       provide: HttpInterceptor,
       useFactory:httpFactory, 
