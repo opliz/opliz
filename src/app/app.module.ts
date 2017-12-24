@@ -25,6 +25,7 @@ import { ChapterNormalViewerService } from './components/chapter/chapter-normal-
 import { HomeService } from './components/home/home.service';
 import { StoryService } from './components/story/story.service';
 import { MoreService } from './components/more/more.service';
+import { ChapterBookViewerService } from './components/chapter/chapter-book-viewer/chapter-book-viewer.service';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { MoreService } from './components/more/more.service';
     LeftSidebarService,
     RightSidebarService,
     ChapterNormalViewerService,
+    ChapterBookViewerService,
     HomeService,
     StoryService,
     MoreService,

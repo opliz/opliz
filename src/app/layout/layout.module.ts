@@ -24,6 +24,7 @@ import { AboutComponent } from '../components/about/about.component';
 import { ContactComponent } from '../components/contact/contact.component';
 import { StoryComponent } from '../components/story/story.component';
 import { ChapterNormalViewerComponent } from '../components/chapter/chapter-normal-viewer/chapter-normal-viewer.component';
+import { ChapterBookViewerComponent } from '../components/chapter/chapter-book-viewer/chapter-book-viewer.component';
 import { TypeComponent } from '../components/type/type.component';
 import { StatusComponent } from '../components/status/status.component';
 import { MoreComponent } from '../components/more/more.component';
@@ -61,6 +62,7 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
     ContactComponent,
     StoryComponent,
     ChapterNormalViewerComponent,
+    ChapterBookViewerComponent,
     TypeComponent,
     StatusComponent,
     MoreComponent
