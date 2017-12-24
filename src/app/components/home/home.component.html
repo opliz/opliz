@@ -20,10 +20,12 @@
                   <br>
                   <abbr class="lst_type">
                     <b>Thể loại: </b> 
-                    <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}" *ngFor="let type of chapter.story.types">{{type.typeName}}<span>, </span></a>
+                    <ng-template ngFor let-type [ngForOf] = chapter.story.types>
+                    <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
+                    </ng-template>
                   </abbr>
                   <br>
-                  <a class="lst_rdmr" href="#">
+                  <a class="lst_rdmr" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.story.storyId}}">
                     Xem các tập khác
                   </a>
                   <span class="clear"></span>
