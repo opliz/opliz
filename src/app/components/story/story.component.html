@@ -29,7 +29,9 @@
                   <li>
                     <b>Thể loại:</b>
                     <span class="lst_type">
-                      <a *ngFor="let type of story.types" href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}<span>, </span></a>
+                      <ng-template ngFor let-type [ngForOf] = story.types>
+                        <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
+                      </ng-template>
                     </span>
                   </li>
                 </ul>

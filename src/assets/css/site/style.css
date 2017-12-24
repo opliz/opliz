@@ -1368,6 +1368,10 @@ a.mrpbt:hover {
 	text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
+.title > span:hover {
+	color: #F27374 !important;
+}
+
 #cside .lst_wrap li {
 	padding: 5px 4px 4px;
 	padding-left: 5px;
