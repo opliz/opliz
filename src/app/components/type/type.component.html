@@ -14,10 +14,10 @@
                   <div class="lst_wrap" id="paging" *ngFor="let story of stories">
                       <div class="clearfix" style="border-bottom: 1px solid #ddd;">
                         <div>
-                          <a class="lst_thmba" href="#">
+                          <a class="lst_thmba" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">
                             <img alt="" src="{{story.storyCoverImageUrl}}" width="75px" height="100px">
                           </a>
-                          <a id="tooltip-link-storyId" class="lst_title" href="#">
+                          <a id="tooltip-link-storyId" class="lst_title" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">
                             {{story.storyName}}
                           </a>
                           <br>
