@@ -5,7 +5,7 @@ import { BaseService } from '../common/services/base.service';
 
 @Injectable()
 export class HeaderService extends BaseService {
-  urlStatusApi : string = Config.apiUrl + '/webservice/manga/status';
+  urlStatusApi : string = Config.apiUrl + '/webservice/manga/statuses';
   urlTypesApi : string = Config.apiUrl + '/webservice/manga/types';
 
   constructor(public http : HttpInterceptor) {
