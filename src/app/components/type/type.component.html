@@ -29,9 +29,9 @@
                           <br>
                         </div>
                         <div class="clear"></div>
-                          <div class="story-description">
-                            {{story.storyDescription}}
-                          </div>
+                        <div class="story-description" *ngIf="story.storyDescription.length > 0">
+                          {{story.storyDescription}}
+                        </div>
                       </div>
                   </div>
                 </div>
