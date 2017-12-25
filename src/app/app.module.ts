@@ -26,6 +26,7 @@ import { HomeService } from './components/home/home.service';
 import { StoryService } from './components/story/story.service';
 import { MoreService } from './components/more/more.service';
 import { TypeService } from './components/type/type.service';
+import { StatusService } from './components/status/status.service';
 import { ChapterBookViewerService } from './components/chapter/chapter-book-viewer/chapter-book-viewer.service';
 
 @NgModule({
@@ -52,6 +53,7 @@ import { ChapterBookViewerService } from './components/chapter/chapter-book-view
     StoryService,
     MoreService,
     TypeService,
+    StatusService,
     {
       provide: HttpInterceptor,
       useFactory:httpFactory, 

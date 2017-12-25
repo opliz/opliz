@@ -6,7 +6,7 @@
           <article class="post hentry">
             <div class="hwrap">
               <h2 class="title">
-                Type Name
+                {{type.typeName}}
                 <span class="fontawesome-reorder"></span>
               </h2>
               <div class="hwrap section">
@@ -24,7 +24,9 @@
                           <abbr class="lst_author">Tác giả: <span>{{story.storyAuthor}}</span></abbr>
                           <br>
                           <abbr class="lst_type"><b>Thể loại: </b> 
-
+                            <ng-template ngFor let-type [ngForOf] = story.types>
+                              <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
+                            </ng-template>
                           </abbr>
                           <br>
                         </div>
