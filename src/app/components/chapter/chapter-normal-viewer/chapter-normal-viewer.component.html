@@ -51,19 +51,9 @@
             <div class="clear"></div>
             <div class="related-post">
               <ul class="dte-3">
-                <li class="dte3_item">
+                <li class="dte3_item" *ngFor="let story of relatedStories">
                   <div class="dte3_wrap">
-                    <a class="dte3_title" href="#">Truyen 1</a>
-                  </div>
-                </li>
-                <li class="dte3_item">
-                  <div class="dte3_wrap">
-                    <a class="dte3_title" href="#">Truyen 2</a>
-                  </div>
-                </li>
-                <li class="dte3_item">
-                  <div class="dte3_wrap">
-                    <a class="dte3_title" href="#">Truyen 3</a>
+                    <a class="dte3_title" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">{{story.storyName}}</a>
                   </div>
                 </li>
               </ul>
