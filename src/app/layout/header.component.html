@@ -54,12 +54,11 @@
       </a>
       <ul class='dropdown'>
         <li class="secondary-menu" *ngFor="let status of statuses">
-          <a href='truyen-tranh/trang-thai/{{status.statusUrl}}/{{status.statusId}}' title='titele'>{{status.statusName}}</a>
+          <a href='truyen-tranh/trang-thai/{{status.statusUrl}}/{{status.statusId}}' title='{{status.statusName}}'>{{status.statusName}}</a>
         </li>
       </ul>
     </li>
     <li class="primary-menu"><a href='/about' title='About'>About</a></li>
-    <li class="primary-menu"><a href='/contact' title='Contact'>Contact</a></li>
     <span class="clear"></span>
   </ul>
   <span class='fmenu'>
