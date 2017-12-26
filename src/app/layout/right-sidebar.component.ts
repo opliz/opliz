@@ -7,8 +7,10 @@ import { Type } from '../common/beans/type';
   templateUrl: './right-sidebar.component.html',
 })
 export class RightSidebarComponent implements OnInit {
-  types : Type[];
-  constructor(private rightSidebarService : RightSidebarService) { }
+  types : Array<Type>;
+  constructor(private rightSidebarService : RightSidebarService) {
+    this.types = new Array<Type>();
+  }
 
   ngOnInit() {
     this.loadTypes();
@@ -16,7 +18,6 @@ export class RightSidebarComponent implements OnInit {
 
   loadTypes() {
     var request = this.rightSidebarService.getTypes().subscribe(result => {
-      this.types = new Array<Type>();
       this.types = result;
     });
   }

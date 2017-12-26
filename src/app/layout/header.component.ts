@@ -9,10 +9,13 @@ import { Type } from '../common/beans/type';
 })
 export class HeaderComponent implements OnInit {
 
-  statuses : Status[];
-  types : Type[];
+  statuses : Array<Status>;
+  types : Array<Type>;
 
-  constructor(private headerService : HeaderService) { }
+  constructor(private headerService : HeaderService) {
+    this.statuses = new Array<Status>();
+    this.types = new Array<Type>();
+  }
 
   ngOnInit() {
     this.loadStatuses();
@@ -21,14 +24,12 @@ export class HeaderComponent implements OnInit {
 
   loadStatuses() {
     var request = this.headerService.getStatuses().subscribe(result => {
-      this.statuses = new Array<Status>();
       this.statuses = result;
     });
   }
 
   loadTypes() {
     var request = this.headerService.getTypes().subscribe(result => {
-      this.types = new Array<Type>();
       this.types = result;
     });
   }
