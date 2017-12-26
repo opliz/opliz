@@ -11,8 +11,6 @@
               </h2>
             </div>
             <div class="post-body entry-content">
-
-
               <div class="synop_top">
                 <div class="synop_thumbs">
                   <img alt="" src="{{story.storyCoverImageUrl}}">
@@ -37,23 +35,23 @@
                 </ul>
               </div>
               <div class="clear"></div>
-              <div class="synop_down">
-                  <table>
-                    <thead>
-                      <tr>
+              <div class="synop_down" *ngIf="story.chapters?.length > 0">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>
+                        Tập
+                      </td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let chapter of story.chapters">
                         <td>
-                          Tập
+                          <a href="truyen-tranh/{{story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">{{chapter.chapterName}}</a>
                         </td>
                       </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let chapter of story.chapters">
-                          <td>
-                            <a href="truyen-tranh/{{story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">{{chapter.chapterName}}</a>
-                          </td>
-                        </tr>
-                    </tbody>
-                  </table>
+                  </tbody>
+                </table>
                 <div class="description">
                   {{story.storyDescription}}
                 </div>
