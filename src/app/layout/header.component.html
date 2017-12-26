@@ -27,12 +27,12 @@
       <div id='header-inner'>
         <h1>
           <a href='/'
-            style='display: block'> <img
-            alt='manganhatban.com' height='200px; '
-            id='Header1_headerimg'
-            src='assets/img/site/bg_header.png'
-            style='display: block'
-            title='Manga' width='100%; ' />
+            style='display: block'>
+            <img alt='manganhatban.com' height='200px'
+              id='Header1_headerimg'
+              src='assets/img/site/bg_header.png'
+              style='display: block'
+              title='Manga' width='100%' />
           </a>
         </h1>
       </div>
@@ -49,12 +49,24 @@
       </a>
     </li>
     <li class="multi-menu">
-      <a id="truyen-tranh-menu" class="top-menu" href='#' title='Truyện Tranh'>Truyện tranh
-        <span class='fontawesome-sort-down idrop'></span>
+      <a id="truyen-tranh-menu" class="top-menu" href='#' title='Truyện Tranh'>
+        Truyện tranh<span class='fontawesome-sort-down idrop'></span>
       </a>
       <ul class='dropdown'>
-        <li class="secondary-menu" *ngFor="let status of statuses">
-          <a href='truyen-tranh/trang-thai/{{status.statusUrl}}/{{status.statusId}}' title='{{status.statusName}}'>{{status.statusName}}</a>
+        <li class="secondary-menu">
+          <a href='truyen-tranh/trang-thai/coming-soon/1' title='Coming Soon'>
+            Coming Soon
+          </a>
+        </li>
+        <li class="secondary-menu">
+          <a href='truyen-tranh/trang-thai/on-going/2' title='Ongoing'>
+            Ongoing
+          </a>
+        </li>
+        <li class="secondary-menu">
+          <a href='truyen-tranh/trang-thai/full/3' title='Full'>
+            Full
+          </a>
         </li>
       </ul>
     </li>
