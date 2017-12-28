@@ -18,16 +18,11 @@ import { HttpInterceptor } from './common/services/HttpInterceptor';
 import { appRoutes } from './routing';
 import { LayoutModule } from './layout/layout.module';
 import { AppComponent } from './app.component';
-import { LeftSidebarService } from './layout/left-sidebar.service';
-import { RightSidebarService } from './layout/right-sidebar.service';
-import { HeaderService } from './layout/header.service';
-import { ChapterNormalViewerService } from './components/chapter/chapter-normal-viewer/chapter-normal-viewer.service';
-import { HomeService } from './components/home/home.service';
-import { StoryService } from './components/story/story.service';
-import { MoreService } from './components/more/more.service';
-import { TypeService } from './components/type/type.service';
-import { StatusService } from './components/status/status.service';
-import { ChapterBookViewerService } from './components/chapter/chapter-book-viewer/chapter-book-viewer.service';
+
+import { StatusService } from './common/services/status.service';
+import { TypeService } from './common/services/type.service';
+import { StoryService } from './common/services/story.service';
+import { ChapterService } from './common/services/chapter.service';
 
 @NgModule({
   declarations: [
@@ -44,16 +39,10 @@ import { ChapterBookViewerService } from './components/chapter/chapter-book-view
   ],
   exports: [SlimLoadingBarModule],
   providers: [
-    HeaderService,
-    LeftSidebarService,
-    RightSidebarService,
-    ChapterNormalViewerService,
-    ChapterBookViewerService,
-    HomeService,
-    StoryService,
-    MoreService,
     TypeService,
     StatusService,
+    StoryService,
+    ChapterService,
     {
       provide: HttpInterceptor,
       useFactory:httpFactory, 

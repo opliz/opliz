@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RightSidebarService } from './right-sidebar.service';
+import { TypeService } from '../common/services/type.service';
 import { Type } from '../common/beans/type';
 
 @Component({
@@ -8,7 +8,7 @@ import { Type } from '../common/beans/type';
 })
 export class RightSidebarComponent implements OnInit {
   types : Array<Type>;
-  constructor(private rightSidebarService : RightSidebarService) {
+  constructor(private typeService : TypeService) {
     this.types = new Array<Type>();
   }
 
@@ -17,7 +17,7 @@ export class RightSidebarComponent implements OnInit {
   }
 
   loadTypes() {
-    var request = this.rightSidebarService.getTypes().subscribe(result => {
+    var request = this.typeService.getTypes().subscribe(result => {
       this.types = result;
     });
   }

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router , ActivatedRoute} from '@angular/router';
 import { Story } from '../../common/beans/story';
 import { Type } from '../../common/beans/type';
-import { TypeService } from './type.service';
+import { TypeService } from '../../common/services/type.service';
+import { StoryService } from '../../common/services/story.service';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class TypeComponent implements OnInit {
   activeIdSub: any;
   type : Type;
   stories : Array<Story>;
-  constructor(private typeService : TypeService, private router : Router,private route : ActivatedRoute) {
+  constructor(private typeService : TypeService, private storyService : StoryService, private router : Router,private route : ActivatedRoute) {
     this.activeIdSub = this.route.params.subscribe(params => {
       this.typeId = params['typeId'];
       this.stories = new Array<Story>();
@@ -30,7 +31,7 @@ export class TypeComponent implements OnInit {
   }
 
   loadStories() {
-    var request = this.typeService.getStoryByTypeId(this.typeId).subscribe(result => {
+    var request = this.storyService.getStoryByTypeId(this.typeId).subscribe(result => {
       this.stories = result;
     });
   }

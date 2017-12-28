@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router ,ActivatedRoute} from '@angular/router';
 import { Story } from '../../common/beans/story';
-import { StoryService } from './story.service';
+import { StoryService } from '../../common/services/story.service';
 
 @Component({
   selector: 'app-story',

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LeftSidebarService } from './left-sidebar.service';
+import { ChapterService } from '../common/services/chapter.service';
+import { StoryService } from '../common/services/story.service';
 import { Chapter } from '../common/beans/chapter';
 import { Story } from '../common/beans/story';
 
@@ -10,7 +11,7 @@ import { Story } from '../common/beans/story';
 export class LeftSidebarComponent implements OnInit {
   chapters : Array<Chapter>;
   stories : Array<Story>;
-  constructor(private leftSidebarService : LeftSidebarService) {
+  constructor(private chapterService : ChapterService, private storyService : StoryService) {
     this.chapters = new Array<Chapter>();
     this.stories = new Array<Story>();
   }
@@ -21,13 +22,13 @@ export class LeftSidebarComponent implements OnInit {
   }
 
   loadTopChapters() {
-    var request = this.leftSidebarService.getTopChapters().subscribe(result => {
+    var request = this.chapterService.getTopChapters().subscribe(result => {
       this.chapters = result;
     });
   }
 
   loadPopularStories() {
-    var request = this.leftSidebarService.getPopularStories().subscribe(result => {
+    var request = this.storyService.getPopularStories().subscribe(result => {
       this.stories = result;
     });
   }

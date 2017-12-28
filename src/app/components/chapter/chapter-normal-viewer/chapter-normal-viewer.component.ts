@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router ,ActivatedRoute} from '@angular/router';
 import { Chapter } from '../../../common/beans/chapter';
 import { Story } from '../../../common/beans/story';
-import { ChapterNormalViewerService } from './chapter-normal-viewer.service';
+import { ChapterService } from '../../../common/services/chapter.service';
+import { StoryService } from '../../../common/services/story.service';
 
 @Component({
   selector: 'app-chapter-normal-viewer',
@@ -14,7 +15,7 @@ export class ChapterNormalViewerComponent implements OnInit {
   activeIdSub: any;
   chapter : Chapter;
   relatedStories: Array<Story>;
-  constructor(private chapterNormalViewerService : ChapterNormalViewerService, private router: Router,private route: ActivatedRoute) {
+  constructor(private chapterService : ChapterService, private storyService : StoryService, private router: Router,private route: ActivatedRoute) {
     this.activeIdSub = this.route.params.subscribe(params => {
       this.chapterId = params['chapterId'];
       this.chapter = new Chapter();
@@ -28,13 +29,13 @@ export class ChapterNormalViewerComponent implements OnInit {
   }
 
   loadChapter() {
-    var request = this.chapterNormalViewerService.getById(this.chapterId).subscribe(result => {
+    var request = this.chapterService.getById(this.chapterId).subscribe(result => {
       this.chapter = result;
     });
   }
 
   loadRelatedStories() {
-    var request = this.chapterNormalViewerService.getRelatedStoriesById(this.chapterId).subscribe(result => {
+    var request = this.storyService.getRelatedStoriesById(this.chapterId).subscribe(result => {
       this.relatedStories = result;
     });
   }

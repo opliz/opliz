@@ -28,6 +28,7 @@ import { ChapterBookViewerComponent } from '../components/chapter/chapter-book-v
 import { TypeComponent } from '../components/type/type.component';
 import { StatusComponent } from '../components/status/status.component';
 import { MoreComponent } from '../components/more/more.component';
+import { SearchComponent } from '../components/search/search.component';
 
 import { routing } from './routing';
 import {HttpInterceptor} from '../common/services/HttpInterceptor';
@@ -65,7 +66,8 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
     ChapterBookViewerComponent,
     TypeComponent,
     StatusComponent,
-    MoreComponent
+    MoreComponent,
+    SearchComponent
   ]
 })
 export class LayoutModule {

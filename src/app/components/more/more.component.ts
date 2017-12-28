@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router ,ActivatedRoute} from '@angular/router';
 import { Chapter } from '../../common/beans/chapter';
-import { MoreService } from './more.service';
+import { ChapterService } from '../../common/services/chapter.service';
 
 @Component({
   selector: 'app-more',
@@ -14,7 +14,7 @@ export class MoreComponent implements OnInit {
   activeIdSub: any;
   chapters : Array<Chapter>;
 
-  constructor(private moreService : MoreService, private router : Router,private route : ActivatedRoute) {
+  constructor(private chapterService : ChapterService, private router : Router,private route : ActivatedRoute) {
     this.activeIdSub = this.route.params.subscribe(params => {
       this.index = params['index'];
       this.chapters = new Array<Chapter>();
@@ -27,7 +27,7 @@ export class MoreComponent implements OnInit {
   }
 
   loadChapters() {
-    var request = this.moreService.getChaptesBySize(this.index).subscribe(result => {
+    var request = this.chapterService.getMoreChaptesBySize(this.index).subscribe(result => {
       this.chapters = result;
     });
   }

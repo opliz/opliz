@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router ,ActivatedRoute} from '@angular/router';
 import { Chapter } from '../../common/beans/chapter';
-import { HomeService } from './home.service';
+import { ChapterService } from '../../common/services/chapter.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ import { HomeService } from './home.service';
 export class HomeComponent implements OnInit {
   activeIdSub: any;
   chapters : Array<Chapter>;
-  constructor(private homeService : HomeService) {
+  constructor(private chapterService : ChapterService) {
   }
 
   ngOnInit() {
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
   loadChapters() {
-    var request = this.homeService.getChaptesBySize().subscribe(result => {
+    var request = this.chapterService.getChaptesBySize().subscribe(result => {
       this.chapters = result;
     });
   }

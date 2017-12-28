@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderService } from './header.service';
+import { StatusService } from '../common/services/status.service';
+import { TypeService } from '../common/services/type.service';
 import { Status } from '../common/beans/status';
 import { Type } from '../common/beans/type';
 
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit {
   statuses : Array<Status>;
   types : Array<Type>;
 
-  constructor(private headerService : HeaderService) {
+  constructor(private statusService : StatusService, private typeService : TypeService) {
     this.statuses = new Array<Status>();
     this.types = new Array<Type>();
   }
@@ -23,13 +24,13 @@ export class HeaderComponent implements OnInit {
   }
 
   loadStatuses() {
-    var request = this.headerService.getStatuses().subscribe(result => {
+    var request = this.statusService.getStatuses().subscribe(result => {
       this.statuses = result;
     });
   }
 
   loadTypes() {
-    var request = this.headerService.getTypes().subscribe(result => {
+    var request = this.typeService.getTypes().subscribe(result => {
       this.types = result;
     });
   }
