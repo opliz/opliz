@@ -17,7 +17,7 @@ export class TypeComponent implements OnInit {
   activeIdSub: any;
   type : Type;
   stories : Array<Story>;
-  constructor(private typeService : TypeService, private storyService : StoryService, private router : Router,private route : ActivatedRoute) {
+  constructor(private typeService : TypeService, private storyService : StoryService, private router : Router, private route : ActivatedRoute) {
     this.activeIdSub = this.route.params.subscribe(params => {
       this.typeId = params['typeId'];
       this.stories = new Array<Story>();

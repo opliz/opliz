@@ -1,3 +1,47 @@
-<p>
-  search works!
-</p>
+<div id="content-hwrap">
+  <div class="hwrap section">
+    <div class="main section" id="main">
+      <div class="widget Blog" id="Blog1">
+        <div class="blog-posts hfeed">
+          <article class="post hentry">
+            <div class="hwrap">
+              <h2 class="title">
+                Kết Quả tìm kiếm
+                <span class="fontawesome-reorder"></span>
+              </h2>
+              <div class="hwrap section">
+                <div class="widget-content">
+                  <div class="lst_wrap" id="paging" *ngFor="let story of stories">
+                      <div class="clearfix" style="border-bottom: 1px solid #ddd;">
+                        <div>
+                          <a class="lst_thmba" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">
+                            <img alt="" src="{{story.storyCoverImageUrl}}" width="75px" height="100px">
+                          </a>
+                          <a id="tooltip-link-storyId" class="lst_title" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">
+                            {{story.storyName}}
+                          </a>
+                          <br>
+                          <abbr class="lst_author">Tác giả: <span>{{story.storyAuthor}}</span></abbr>
+                          <br>
+                          <abbr class="lst_type"><b>Thể loại: </b> 
+                            <ng-template ngFor let-type [ngForOf] = story.types>
+                              <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
+                            </ng-template>
+                          </abbr>
+                          <br>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="story-description" *ngIf="story.storyDescription?.length > 0">
+                          {{story.storyDescription}}
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,7 @@ import { ChapterBookViewerComponent } from '../components/chapter/chapter-book-v
 import { TypeComponent } from '../components/type/type.component';
 import { StatusComponent } from '../components/status/status.component';
 import { MoreComponent } from '../components/more/more.component';
+import { SearchComponent } from '../components/search/search.component';
 
 const appRoute: Routes = [
     {
@@ -23,7 +24,8 @@ const appRoute: Routes = [
         { path: 'truyen-tranh/the-loai/:typeUrl/:typeId', component: TypeComponent},
         { path: 'truyen-tranh/trang-thai/:statusUrl/:statusId', component: StatusComponent},
         { path: 'about', component: AboutComponent},
-        { path: 'contact', component: ContactComponent}
+        { path: 'contact', component: ContactComponent},
+        { path: 'truyen-tranh/search', component: SearchComponent}
       ]
     },
     {

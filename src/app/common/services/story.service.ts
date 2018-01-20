@@ -11,6 +11,7 @@ export class StoryService extends BaseService {
   urlPopularApi : string = Config.apiUrl + '/webservice/manga/stories/popular';
   urlStoriesInStatusApi : string = Config.apiUrl + '/webservice/manga/status/stories?size=10&page=1&status_id=';
   urlStoriesInTypeApi : string = Config.apiUrl + '/webservice/manga/type/stories?size=10&page=1&type_id=';
+  urlStoriesSearch : string = Config.apiUrl + '/webservice/manga/story/search?name=';
 
   constructor(public http : HttpInterceptor) {
     super(http);
@@ -46,6 +47,14 @@ export class StoryService extends BaseService {
 
   getStoryByTypeId(typeId) {
     var url = this.urlStoriesInTypeApi + typeId;
+    return this.http.get(url, this.getHeaders()).map((response: Response) =>{
+      var result = response.json();
+      return result;
+    });
+  }
+
+  getStoriesSearch(name) {
+    var url = this.urlStoriesSearch + name;
     return this.http.get(url, this.getHeaders()).map((response: Response) =>{
       var result = response.json();
       return result;
