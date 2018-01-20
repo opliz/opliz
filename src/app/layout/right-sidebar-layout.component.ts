@@ -3,10 +3,10 @@ import { TypeService } from '../common/services/type.service';
 import { Type } from '../common/beans/type';
 
 @Component({
-  selector: 'layout-right-sidebar',
-  templateUrl: './right-sidebar.component.html',
+  selector: 'right-sidebar-layout',
+  templateUrl: './right-sidebar-layout.component.html',
 })
-export class RightSidebarComponent implements OnInit {
+export class RightSidebarLayoutComponent implements OnInit {
   types : Array<Type>;
   constructor(private typeService : TypeService) {
     this.types = new Array<Type>();

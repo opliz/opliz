@@ -5,10 +5,10 @@ import { Status } from '../common/beans/status';
 import { Type } from '../common/beans/type';
 
 @Component({
-  selector: 'layout-header',
-  templateUrl: './header.component.html',
+  selector: 'header-layout',
+  templateUrl: './header-layout.component.html',
 })
-export class HeaderComponent implements OnInit {
+export class HeaderLayoutComponent implements OnInit {
 
   statuses : Array<Status>;
   types : Array<Type>;

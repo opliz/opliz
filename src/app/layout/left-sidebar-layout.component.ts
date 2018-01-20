@@ -5,10 +5,10 @@ import { Chapter } from '../common/beans/chapter';
 import { Story } from '../common/beans/story';
 
 @Component({
-  selector: 'layout-left-sidebar',
-  templateUrl: './left-sidebar.component.html',
+  selector: 'left-sidebar-layout',
+  templateUrl: './left-sidebar-layout.component.html',
 })
-export class LeftSidebarComponent implements OnInit {
+export class LeftSidebarLayoutComponent implements OnInit {
   chapters : Array<Chapter>;
   stories : Array<Story>;
   constructor(private chapterService : ChapterService, private storyService : StoryService) {

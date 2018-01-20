@@ -1084,7 +1084,6 @@ a.comment-delete img {
 	height: 30px;
 	line-height: 30px;
 	font-size: 20px;
-	font-family: & #39; Trebuchet MS&#39; , sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
 	border-bottom: 4px solid #333;
@@ -1668,4 +1667,9 @@ ul.social-icons li.youtube:hover {
 	text-align: justify;
 	height: 105px;
 	overflow-y: auto;
+}
+
+.p-not-found {
+	text-align: center;
+  font-weight: bold;
 }

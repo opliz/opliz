@@ -13,11 +13,12 @@ import { RouterModule } from '@angular/router';
 
 import { HomeLayoutComponent } from './home/home-layout.component';
 import { ContentLayoutComponent } from './content/content-layout.component';
-import { HeaderComponent } from './header.component';
-import { FooterComponent } from './footer.component';
-import { SliderComponent } from './slider.component';
-import { LeftSidebarComponent } from './left-sidebar.component';
-import { RightSidebarComponent } from './right-sidebar.component';
+import { BookViewerLayoutComponent } from './book-viewer/book-viewer-layout.component';
+import { HeaderLayoutComponent } from './header-layout.component';
+import { FooterLayoutComponent } from './footer-layout.component';
+import { SliderLayoutComponent } from './slider-layout.component';
+import { LeftSidebarLayoutComponent } from './left-sidebar-layout.component';
+import { RightSidebarLayoutComponent } from './right-sidebar-layout.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { HomeComponent } from '../components/home/home.component';
 import { AboutComponent } from '../components/about/about.component';
@@ -52,11 +53,12 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
   declarations: [
     HomeLayoutComponent,
     ContentLayoutComponent,
-    HeaderComponent,
-    SliderComponent,
-    LeftSidebarComponent,
-    RightSidebarComponent,
-    FooterComponent,
+    BookViewerLayoutComponent,
+    HeaderLayoutComponent,
+    SliderLayoutComponent,
+    LeftSidebarLayoutComponent,
+    RightSidebarLayoutComponent,
+    FooterLayoutComponent,
     PageNotFoundComponent,
     HomeComponent,
     AboutComponent,
@@ -67,7 +69,7 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
     TypeComponent,
     StatusComponent,
     MoreComponent,
-    SearchComponent
+    SearchComponent,
   ]
 })
 export class LayoutModule {

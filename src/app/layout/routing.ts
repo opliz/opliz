@@ -2,12 +2,14 @@ import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeLayoutComponent } from './home/home-layout.component';
 import { ContentLayoutComponent } from './content/content-layout.component';
+import { BookViewerLayoutComponent } from './book-viewer/book-viewer-layout.component';
 import { HomeComponent } from '../components/home/home.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ContactComponent } from '../components/contact/contact.component';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import { StoryComponent } from '../components/story/story.component';
 import { ChapterNormalViewerComponent } from '../components/chapter/chapter-normal-viewer/chapter-normal-viewer.component';
+import { ChapterBookViewerComponent } from '../components/chapter/chapter-book-viewer/chapter-book-viewer.component';
 import { TypeComponent } from '../components/type/type.component';
 import { StatusComponent } from '../components/status/status.component';
 import { MoreComponent } from '../components/more/more.component';
@@ -29,6 +31,12 @@ const appRoute: Routes = [
       children: [
         { path: 'truyen-tranh/:storyUrl/:storyId', component: StoryComponent},
         { path: 'truyen-tranh/:storyUrl/:chapterUrl/:chapterId', component: ChapterNormalViewerComponent}
+      ]
+    },
+    {
+      path: '', component: BookViewerLayoutComponent,
+      children: [
+        { path: 'truyen-tranh/book-viewer/:storyUrl/:chapterUrl/:chapterId', component: ChapterBookViewerComponent}
       ]
     },
     {
