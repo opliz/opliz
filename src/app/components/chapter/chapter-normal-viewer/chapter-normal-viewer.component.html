@@ -3,7 +3,7 @@
     <div class="main section" id="main">
       <div class="widget Blog" id="Blog1">
         <div class="blog-posts hfeed">
-          <article *ngIf="chapter.pageDetail; else notFound" class="post hentry">
+          <article class="post hentry">
             <div class="hwrap">
               <h2 class="title">
                 {{chapter.story.storyName}} : {{chapter.chapterName}}
@@ -62,24 +62,3 @@
     </div>
   </div>
 </div>
-
-
-<ng-template #notFound>
-  <article class="post hentry">
-    <div class="hwrap">
-      <h2 class="title" style="text-align: center;">
-        CONTENT NOT FOUND
-        <span class="fontawesome-reorder"></span>
-      </h2>
-    </div>
-    <div class="post-body entry-content">
-      <p class="p-not-found">
-        Đếu Có Cái Mẹ Gì Ở Đây Đâu Mà Xem
-      </p>
-      <img src="assets/img/404.png" style="margin: auto; max-width: 256px; max-height: 256px; min-width: 256px">
-      <p class="p-not-found">
-        Mother Fuck!
-      </p>
-    </div>
-  </article>
-</ng-template>
