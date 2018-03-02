@@ -13,13 +13,13 @@ import { StoryService } from '../../common/services/story.service';
 })
 export class TypeComponent implements OnInit {
 
-  typeId : number;
+  typeUrl : string;
   activeIdSub: any;
   type : Type;
   stories : Array<Story>;
   constructor(private typeService : TypeService, private storyService : StoryService, private router : Router, private route : ActivatedRoute) {
     this.activeIdSub = this.route.params.subscribe(params => {
-      this.typeId = params['typeId'];
+      this.typeUrl = params['typeUrl'];
       this.stories = new Array<Story>();
       this.type = new Type();
     });
@@ -31,13 +31,13 @@ export class TypeComponent implements OnInit {
   }
 
   loadStories() {
-    var request = this.storyService.getStoryByTypeId(this.typeId).subscribe(result => {
+    var request = this.storyService.getStoryByTypeUrl(this.typeUrl).subscribe(result => {
       this.stories = result;
     });
   }
 
   loadType() {
-    var request = this.typeService.getTypeByTypeId(this.typeId).subscribe(result => {
+    var request = this.typeService.getTypeByTypeUrl(this.typeUrl).subscribe(result => {
       this.type = result;
     });
   }

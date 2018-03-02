@@ -27,7 +27,7 @@
                   <tbody>
                     <tr *ngFor="let c of chapter.story.chapters">
                       <td>
-                        <a href="truyen-tranh/{{chapter.story.storyUrl}}/{{c.chapterUrl}}/{{c.chapterId}}">{{c.chapterName}}</a>
+                        <a href="{{chapter.story.storyUrl}}/{{c.chapterUrl}}/{{c.chapterId}}">{{c.chapterName}}</a>
                       </td>
                     </tr>
                   </tbody>
@@ -50,7 +50,7 @@
               <ul class="dte-3">
                 <li class="dte3_item" *ngFor="let story of relatedStories">
                   <div class="dte3_wrap">
-                    <a class="dte3_title" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">{{story.storyName}}</a>
+                    <a class="dte3_title" href="{{story.storyUrl}}/{{story.storyId}}">{{story.storyName}}</a>
                   </div>
                 </li>
               </ul>

@@ -7,11 +7,14 @@ import { BaseService } from './base.service';
 export class StoryService extends BaseService {
 
   urlStoriesApi : string = Config.apiUrl + '/webservice/manga/story?manga_id=';
-  urlRelatedStoriesApi : string = Config.apiUrl + '/webservice/manga/stories/related/story?size=7&manga_id=';
-  urlPopularApi : string = Config.apiUrl + '/webservice/manga/stories/popular';
-  urlStoriesInStatusApi : string = Config.apiUrl + '/webservice/manga/status/stories?size=10&page=1&status_id=';
-  urlStoriesInTypeApi : string = Config.apiUrl + '/webservice/manga/type/stories?size=10&page=1&type_id=';
-  urlStoriesSearch : string = Config.apiUrl + '/webservice/manga/story/search?name=';
+  urlRelatedStoriesByStoryIdApi : string = Config.apiUrl + '/webservice/manga/stories-related-story?size=7&manga_id=';
+  urlRelatedStoriesByChapterIdApi : string = Config.apiUrl + '/webservice/manga/stories-related-story-in-chapter?size=7&chapter_id=';
+  urlPopularApi : string = Config.apiUrl + '/webservice/manga/stories-popular';
+  urlStoriesInStatusByIdApi : string = Config.apiUrl + '/webservice/manga/stories-belong-status-id?size=10&page=1&status_id=';
+  urlStoriesInStatusByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-status-url?size=10&page=1&status_url=';
+  urlStoriesInTypeByIdApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-id?size=10&page=1&type_id=';
+  urlStoriesInTypeByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-url?size=10&page=1&type_url=';
+  urlStoriesSearch : string = Config.apiUrl + '/webservice/manga/search?name=';
 
   constructor(public http : HttpInterceptor) {
     super(http);
@@ -25,8 +28,16 @@ export class StoryService extends BaseService {
     });
   }
 
-  getRelatedStoriesById(id) {
-    var url = this.urlRelatedStoriesApi+id;
+  getRelatedStoriesByStoryId(id) {
+    var url = this.urlRelatedStoriesByStoryIdApi+id;
+    return this.http.get(url, this.getHeaders()).map((response: Response) =>{
+      var result = response.json();
+      return result;
+    });
+  }
+
+ getRelatedStoriesByChapterId(id) {
+    var url = this.urlRelatedStoriesByChapterIdApi+id;
     return this.http.get(url, this.getHeaders()).map((response: Response) =>{
       var result = response.json();
       return result;
@@ -38,7 +49,15 @@ export class StoryService extends BaseService {
   }
 
   getStoryByStatusId(statusId) {
-    var url = this.urlStoriesInStatusApi + statusId;
+    var url = this.urlStoriesInStatusByIdApi + statusId;
+    return this.http.get(url, this.getHeaders()).map((response: Response) =>{
+      var result = response.json();
+      return result;
+    });
+  }
+
+  getStoryByStatusUrl(statusUrl) {
+    var url = this.urlStoriesInStatusByUrlApi + statusUrl;
     return this.http.get(url, this.getHeaders()).map((response: Response) =>{
       var result = response.json();
       return result;
@@ -46,7 +65,15 @@ export class StoryService extends BaseService {
   }
 
   getStoryByTypeId(typeId) {
-    var url = this.urlStoriesInTypeApi + typeId;
+    var url = this.urlStoriesInTypeByIdApi + typeId;
+    return this.http.get(url, this.getHeaders()).map((response: Response) =>{
+      var result = response.json();
+      return result;
+    });
+  }
+
+  getStoryByTypeUrl(typeUrl) {
+    var url = this.urlStoriesInTypeByUrlApi + typeUrl;
     return this.http.get(url, this.getHeaders()).map((response: Response) =>{
       var result = response.json();
       return result;

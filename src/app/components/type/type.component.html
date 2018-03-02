@@ -14,10 +14,10 @@
                   <div class="lst_wrap" id="paging" *ngFor="let story of stories">
                       <div class="clearfix" style="border-bottom: 1px solid #ddd;">
                         <div>
-                          <a class="lst_thmba" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">
+                          <a class="lst_thmba" href="{{story.storyUrl}}/{{story.storyId}}">
                             <img alt="" src="{{story.storyCoverImageUrl}}" width="75px" height="100px">
                           </a>
-                          <a id="tooltip-link-storyId" class="lst_title" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">
+                          <a id="tooltip-link-storyId" class="lst_title" href="{{story.storyUrl}}/{{story.storyId}}">
                             {{story.storyName}}
                           </a>
                           <br>
@@ -25,7 +25,7 @@
                           <br>
                           <abbr class="lst_type"><b>Thể loại: </b> 
                             <ng-template ngFor let-type [ngForOf] = story.types>
-                              <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
+                              <a href="the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
                             </ng-template>
                           </abbr>
                           <br>

@@ -6,7 +6,8 @@ import { BaseService } from './base.service';
 @Injectable()
 export class TypeService extends BaseService {
 
-  urlTypeApi : string = Config.apiUrl + '/webservice/manga/type?type_id=';
+  urlTypeByTypeIdApi : string = Config.apiUrl + '/webservice/manga/type?type_id=';
+  urlTypeByTypeUrlApi : string = Config.apiUrl + '/webservice/manga/type-by-url?type_url=';
   urlTypesApi : string = Config.apiUrl + '/webservice/manga/types';
 
   constructor(public http : HttpInterceptor) {
@@ -14,7 +15,15 @@ export class TypeService extends BaseService {
   }
 
   getTypeByTypeId(typeId) {
-    var url = this.urlTypeApi + typeId;
+    var url = this.urlTypeByTypeIdApi + typeId;
+    return this.http.get(url, this.getHeaders()).map((response: Response) =>{
+      var result = response.json();
+      return result;
+    });
+  }
+
+  getTypeByTypeUrl(typeUrl) {
+    var url = this.urlTypeByTypeUrlApi + typeUrl;
     return this.http.get(url, this.getHeaders()).map((response: Response) =>{
       var result = response.json();
       return result;

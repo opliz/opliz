@@ -28,6 +28,7 @@ import { ChapterNormalViewerComponent } from '../components/chapter/chapter-norm
 import { ChapterBookViewerComponent } from '../components/chapter/chapter-book-viewer/chapter-book-viewer.component';
 import { TypeComponent } from '../components/type/type.component';
 import { StatusComponent } from '../components/status/status.component';
+import { StatusMoreComponent } from '../components/status/status-more.component';
 import { MoreComponent } from '../components/more/more.component';
 import { SearchComponent } from '../components/search/search.component';
 
@@ -68,6 +69,7 @@ import {HttpInterceptor} from '../common/services/HttpInterceptor';
     ChapterBookViewerComponent,
     TypeComponent,
     StatusComponent,
+    StatusMoreComponent,
     MoreComponent,
     SearchComponent,
   ]

@@ -33,7 +33,7 @@ export class StoryComponent implements OnInit {
   }
 
   loadRelatedStories() {
-    var request = this.storyService.getRelatedStoriesById(this.storyId).subscribe(result => {
+    var request = this.storyService.getRelatedStoriesByStoryId(this.storyId).subscribe(result => {
       this.relatedStories = result;
     });
   }

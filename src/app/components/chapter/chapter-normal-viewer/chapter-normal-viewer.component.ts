@@ -35,7 +35,7 @@ export class ChapterNormalViewerComponent implements OnInit {
   }
 
   loadRelatedStories() {
-    var request = this.storyService.getRelatedStoriesById(this.chapterId).subscribe(result => {
+    var request = this.storyService.getRelatedStoriesByChapterId(this.chapterId).subscribe(result => {
       this.relatedStories = result;
     });
   }

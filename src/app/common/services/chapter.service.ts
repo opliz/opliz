@@ -6,10 +6,10 @@ import { BaseService } from './base.service';
 @Injectable()
 export class ChapterService extends BaseService {
 
-  urlChaptersApi : string = Config.apiUrl + '/webservice/manga/chapters/list?page=1&size=10';
-  urlMoreChaptersApi : string = Config.apiUrl + '/webservice/manga/chapters/list?size=10&page=';
+  urlChaptersApi : string = Config.apiUrl + '/webservice/manga/all-chapters?page=1&size=10';
+  urlMoreChaptersApi : string = Config.apiUrl + '/webservice/manga/all-chapters?size=10&page=';
   urlChapterApi : string = Config.apiUrl + '/webservice/manga/chapter?chapter_id=';
-  urlTopApi : string = Config.apiUrl + '/webservice/manga/chapters/top';
+  urlTopApi : string = Config.apiUrl + '/webservice/manga/top-chapters-in-week';
 
   constructor(public http : HttpInterceptor) {
     super(http);

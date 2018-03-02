@@ -2,7 +2,7 @@
   <span class='mfrmenu'>
     <select class='genrebox'>
       <option value=''>Thể loại :</option>
-      <option *ngFor="let type of types" value='truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}'>{{type.typeName}}</option>
+      <option *ngFor="let type of types" value='the-loai/{{type.typeUrl}}'>{{type.typeName}}</option>
     </select>
     <span class='ranpost'>
       <a onclick='feelingLucky();' title='Feeling Lucky'><i class='fontawesome-random'></i></a>
@@ -13,7 +13,7 @@
       <img alt="logo" src="assets/img/site/logo.png" />
     </a>
   </div>
-  <form action="/truyen-tranh/search" class="search-form" method="GET">
+  <form action="/search" class="search-form" method="GET">
     <input class='search-input' name='search_query'
       placeholder='Tìm kiếm truyện...'
       type='text'/>
@@ -54,17 +54,17 @@
       </a>
       <ul class='dropdown'>
         <li class="secondary-menu">
-          <a href='truyen-tranh/trang-thai/coming-soon/1' title='Coming Soon'>
+          <a href='trang-thai/coming-soon' title='Coming Soon'>
             Coming Soon
           </a>
         </li>
         <li class="secondary-menu">
-          <a href='truyen-tranh/trang-thai/on-going/2' title='Ongoing'>
+          <a href='trang-thai/on-going' title='Ongoing'>
             Ongoing
           </a>
         </li>
         <li class="secondary-menu">
-          <a href='truyen-tranh/trang-thai/full/3' title='Full'>
+          <a href='trang-thai/full' title='Full'>
             Full
           </a>
         </li>
@@ -74,7 +74,7 @@
     <span class="clear"></span>
   </ul>
   <span class='fmenu'>
-    <form action="/truyen-tranh/search" class="search-form" method="GET">
+    <form action="/search" class="search-form" method="GET">
       <input class='search-input' name='search_query'
         onblur='if (this.value == "") {this.value = "Tìm kiếm truyện...";}'
         onfocus='if (this.value == "Tìm kiếm truyện...") {this.value = ""}'
@@ -83,7 +83,7 @@
     </form>
     <select class='genrebox'>
       <option value=''>Thể loại :</option>
-      <option *ngFor="let type of types" value='truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}'>{{type.typeName}}</option>
+      <option *ngFor="let type of types" value='the-loai/{{type.typeUrl}}'>{{type.typeName}}</option>
     </select>
     <span class="ranpost"><a onclick='feelingLucky();' title='Feeling Lucky'><i class='fontawesome-random'></i></a></span>
     <span class="clear"></span>

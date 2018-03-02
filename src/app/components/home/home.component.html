@@ -9,23 +9,23 @@
           <div class="lst_wrap">
             <div class="clearfix" *ngFor="let chapter of chapters">
               <div class="home_content">
-                <a class="lst_thmba" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">
+                <a class="lst_thmba" href="{{chapter.story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">
                   <img alt="" src="{{chapter.story.storyCoverImageUrl}}" width="75px" height="100px">
                 </a>
-                <a style="font-size: 13px; font-weight: 600;" id="tooltip-link-chapterId" class="lst_title" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">
+                <a style="font-size: 13px; font-weight: 600;" id="tooltip-link-chapterId" class="lst_title" href="{{chapter.story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">
                   {{chapter.chapterName}}
                 </a>
                 <br>
-                  <a class="lst_date" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.story.storyId}}">{{chapter.story.storyName}}</a>
+                  <a class="lst_date" href="{{chapter.story.storyUrl}}/{{chapter.story.storyId}}">{{chapter.story.storyName}}</a>
                 <br>
                 <abbr class="lst_type">
                   <b>Thể loại: </b> 
                   <ng-template ngFor let-type [ngForOf] = chapter.story.types>
-                  <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
+                  <a href="the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
                   </ng-template>
                 </abbr>
                 <br>
-                <a class="lst_rdmr" href="truyen-tranh/{{chapter.story.storyUrl}}/{{chapter.story.storyId}}">
+                <a class="lst_rdmr" href="{{chapter.story.storyUrl}}/{{chapter.story.storyId}}">
                   Xem các tập khác
                 </a>
                 <span class="clear"></span>

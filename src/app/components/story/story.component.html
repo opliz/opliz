@@ -28,7 +28,7 @@
                     <b>Thể loại:</b>
                     <span class="lst_type">
                       <ng-template ngFor let-type [ngForOf] = story.types>
-                        <a href="truyen-tranh/the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
+                        <a href="the-loai/{{type.typeUrl}}/{{type.typeId}}">{{type.typeName}}</a> <span>, </span>
                       </ng-template>
                     </span>
                   </li>
@@ -47,7 +47,7 @@
                   <tbody>
                       <tr *ngFor="let chapter of story.chapters">
                         <td>
-                          <a href="truyen-tranh/{{story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">{{chapter.chapterName}}</a>
+                          <a href="{{story.storyUrl}}/{{chapter.chapterUrl}}/{{chapter.chapterId}}">{{chapter.chapterName}}</a>
                         </td>
                       </tr>
                   </tbody>
@@ -70,7 +70,7 @@
               <ul class="dte-3">
                 <li class="dte3_item" *ngFor="let story of relatedStories">
                   <div class="dte3_wrap">
-                    <a class="dte3_title" href="truyen-tranh/{{story.storyUrl}}/{{story.storyId}}">{{story.storyName}}</a>
+                    <a class="dte3_title" href="{{story.storyUrl}}/{{story.storyId}}">{{story.storyName}}</a>
                   </div>
                 </li>
               </ul>
