@@ -24,7 +24,7 @@ const appRoute: Routes = [
         { path: 'more/:index', component: MoreComponent},
         { path: 'the-loai/:typeUrl', component: TypeComponent},
         { path: 'trang-thai/:statusUrl', component: StatusComponent},
-        { path: 'trang-thai/:statusUrl/:statusId/page-:index', component: StatusMoreComponent},
+        { path: 'trang-thai/:statusUrl/:index', component: StatusMoreComponent},
         { path: 'about', component: AboutComponent},
         { path: 'contact', component: ContactComponent},
         { path: 'search', component: SearchComponent}
