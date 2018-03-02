@@ -14,9 +14,16 @@ $(function(){
 				$(this).addClass("active");
 				$(this).parent('.secondary-menu').parent('.dropdown').parent('.multi-menu').find('.top-menu').addClass('highlight');
 			}
-		})
-	if((t.indexOf("truyen-tranh") !== -1) || (t.indexOf("more") !== -1)) {
-		$('#truyen-tranh-menu').addClass('active');
+		});
+	if(t.indexOf("more") !== -1) {
+		$('#truyen-tranh-menu').addClass('highlight');
+	}
+	if(t.indexOf("trang-thai") >= 0) {
+		$('#truyen-tranh-menu').addClass('highlight');
+		var path = window.location.pathname;
+		checkPath = path.substring(0, path.lastIndexOf('/'));
+		checkPath = checkPath.substring(1);
+		$("a[href=\'" + checkPath + "\']").parent().addClass("active");
 	}
 	});
 //]]>
