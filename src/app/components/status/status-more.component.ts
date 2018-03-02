@@ -28,9 +28,9 @@ export class StatusMoreComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.index++;
     this.loadStories();
     this.loadStatus();
-    this.index++;
   }
 
   loadStories() {
