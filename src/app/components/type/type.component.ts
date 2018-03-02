@@ -31,7 +31,7 @@ export class TypeComponent implements OnInit {
   }
 
   loadStories() {
-    var request = this.storyService.getStoryByTypeUrl(this.typeUrl).subscribe(result => {
+    var request = this.storyService.getFirstStoryGroupByTypeUrl(this.typeUrl).subscribe(result => {
       this.stories = result;
     });
   }

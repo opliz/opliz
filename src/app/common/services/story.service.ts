@@ -11,9 +11,11 @@ export class StoryService extends BaseService {
   urlRelatedStoriesByChapterIdApi : string = Config.apiUrl + '/webservice/manga/stories-related-story-in-chapter?size=7&chapter_id=';
   urlPopularApi : string = Config.apiUrl + '/webservice/manga/stories-popular';
   urlStoriesInStatusByIdApi : string = Config.apiUrl + '/webservice/manga/stories-belong-status-id?size=10&page=1&status_id=';
-  urlStoriesInStatusByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-status-url?size=10&page=1&status_url=';
+  urlFirstStoriesGroupInStatusByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-status-url?size=10&page=1&status_url=';
+  urlStoriesInStatusByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-status-url?size=10&status_url=';
   urlStoriesInTypeByIdApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-id?size=10&page=1&type_id=';
-  urlStoriesInTypeByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-url?size=10&page=1&type_url=';
+  urlFirstStoriesGroupInTypeByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-url?size=10&page=1&type_url=';
+  urlStoriesInTypeByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-url?size=10&type_url=';
   urlStoriesSearch : string = Config.apiUrl + '/webservice/manga/search?name=';
 
   constructor(public http : HttpInterceptor) {
@@ -56,8 +58,16 @@ export class StoryService extends BaseService {
     });
   }
 
-  getStoryByStatusUrl(statusUrl) {
-    var url = this.urlStoriesInStatusByUrlApi + statusUrl;
+  getFirstStoryGroupByStatusUrl(statusUrl) {
+    var url = this.urlFirstStoriesGroupInStatusByUrlApi + statusUrl;
+    return this.http.get(url, this.getHeaders()).map((response: Response) =>{
+      var result = response.json();
+      return result;
+    });
+  }
+
+  getStoryByStatusUrl(statusUrl, page) {
+    var url = this.urlStoriesInStatusByUrlApi + statusUrl + "&page=" + page;
     return this.http.get(url, this.getHeaders()).map((response: Response) =>{
       var result = response.json();
       return result;
@@ -72,8 +82,16 @@ export class StoryService extends BaseService {
     });
   }
 
-  getStoryByTypeUrl(typeUrl) {
-    var url = this.urlStoriesInTypeByUrlApi + typeUrl;
+  getFirstStoryGroupByTypeUrl(typeUrl) {
+    var url = this.urlFirstStoriesGroupInTypeByUrlApi + typeUrl;
+    return this.http.get(url, this.getHeaders()).map((response: Response) =>{
+      var result = response.json();
+      return result;
+    });
+  }
+
+  getStoryByTypeUrl(typeUrl, page) {
+    var url = this.urlStoriesInTypeByUrlApi + typeUrl + "&page=" + page;
     return this.http.get(url, this.getHeaders()).map((response: Response) =>{
       var result = response.json();
       return result;

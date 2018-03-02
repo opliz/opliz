@@ -29,7 +29,7 @@ export class StatusComponent implements OnInit {
   }
 
   loadStories() {
-    var request = this.storyService.getStoryByStatusUrl(this.statusUrl).subscribe(result => {
+    var request = this.storyService.getFirstStoryGroupByStatusUrl(this.statusUrl).subscribe(result => {
       this.stories = result;
     });
   }
