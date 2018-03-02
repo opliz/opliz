@@ -11,6 +11,7 @@ import { StoryComponent } from '../components/story/story.component';
 import { ChapterNormalViewerComponent } from '../components/chapter/chapter-normal-viewer/chapter-normal-viewer.component';
 import { ChapterBookViewerComponent } from '../components/chapter/chapter-book-viewer/chapter-book-viewer.component';
 import { TypeComponent } from '../components/type/type.component';
+import { TypeMoreComponent } from '../components/type/type-more.component';
 import { StatusComponent } from '../components/status/status.component';
 import { StatusMoreComponent } from '../components/status/status-more.component';
 import { MoreComponent } from '../components/more/more.component';
@@ -23,6 +24,7 @@ const appRoute: Routes = [
         { path: '', component: HomeComponent, pathMatch : 'full' },
         { path: 'more/:index', component: MoreComponent},
         { path: 'the-loai/:typeUrl', component: TypeComponent},
+        { path: 'the-loai/:typeUrl/:index', component: TypeMoreComponent},
         { path: 'trang-thai/:statusUrl', component: StatusComponent},
         { path: 'trang-thai/:statusUrl/:index', component: StatusMoreComponent},
         { path: 'about', component: AboutComponent},
