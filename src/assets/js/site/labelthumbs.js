@@ -28,7 +28,7 @@ $(function(){
 			$("a[href=\'" + checkPath + "\']").parent().addClass("active");
 		} else {
 			if(t.indexOf("the-loai") >=0 ) {
-				$('#truyen-tranh-menu').addClass('active');
+				$('#truyen-tranh-menu').addClass('highlight');
 			} else {
 				$('#truyen-tranh-menu').addClass('highlight');
 			}
