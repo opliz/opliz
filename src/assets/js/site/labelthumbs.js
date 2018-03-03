@@ -21,7 +21,7 @@ $(function(){
 	checkPath = checkPath.substring(1);
 
 	if(t.indexOf("more") !== -1) {
-		$('#truyen-tranh-menu').addClass('active');
+		$('#truyen-tranh-menu').addClass('highlight');
 	} else {
 		if(t.indexOf("trang-thai") >= 0) {
 			$('#truyen-tranh-menu').addClass('highlight');
