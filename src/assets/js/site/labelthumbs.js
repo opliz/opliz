@@ -22,15 +22,18 @@ $(function(){
 
 	if(t.indexOf("more") !== -1) {
 		$('#truyen-tranh-menu').addClass('active');
+	} else {
+		if(t.indexOf("trang-thai") >= 0) {
+			$('#truyen-tranh-menu').addClass('highlight');
+			$("a[href=\'" + checkPath + "\']").parent().addClass("active");
+		} else {
+			if(t.indexOf("the-loai") >=0 ) {
+				$('#truyen-tranh-menu').addClass('active');
+			} else {
+				$('#truyen-tranh-menu').addClass('highlight');
+			}
+		}
 	}
 
-	if(t.indexOf("trang-thai") >= 0) {
-		$('#truyen-tranh-menu').addClass('highlight');
-		$("a[href=\'" + checkPath + "\']").parent().addClass("active");
-	}
-
-	if(t.indexOf("the-loai") >=0 ) {
-		$('#truyen-tranh-menu').addClass('active');
-	}
 	});
 //]]>
