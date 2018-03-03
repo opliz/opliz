@@ -16,13 +16,13 @@ $(function(){
 		}
 	});
 
-	if(t.indexOf("more") !== -1) {
-		$('#truyen-tranh-menu').addClass('highlight');
-	}
-
 	var path = window.location.pathname;
 	checkPath = path.substring(0, path.lastIndexOf('/'));
 	checkPath = checkPath.substring(1);
+
+	if(t.indexOf("more") !== -1) {
+		$('#truyen-tranh-menu').addClass('active');
+	}
 
 	if(t.indexOf("trang-thai") >= 0) {
 		$('#truyen-tranh-menu').addClass('highlight');
