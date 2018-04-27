@@ -16,7 +16,7 @@ export class StoryService extends BaseService {
   urlStoriesInTypeByIdApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-id?size=10&page=1&type_id=';
   urlFirstStoriesGroupInTypeByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-url?size=10&page=1&type_url=';
   urlStoriesInTypeByUrlApi : string = Config.apiUrl + '/webservice/manga/stories-belong-type-url?size=10&type_url=';
-  urlStoriesSearch : string = Config.apiUrl + '/webservice/manga/search?name=';
+  urlQuickSearchStories : string = Config.apiUrl + '/webservice/manga/quick-search?name=';
 
   constructor(public http : HttpInterceptor) {
     super(http);
@@ -99,7 +99,7 @@ export class StoryService extends BaseService {
   }
 
   getStoriesSearch(name) {
-    var url = this.urlStoriesSearch + name;
+    var url = this.urlQuickSearchStories + name;
     return this.http.get(url, this.getHeaders()).map((response: Response) =>{
       var result = response.json();
       return result;
