@@ -4,7 +4,7 @@
       <div class="widget Blog" id="Blog1">
         <div class="blog-posts hfeed">
           <article class="post hentry">
-            <div class="hwrap">
+            <div class="hwrap" *ngIf="type.typeName">
               <h2 class="title">
                 {{type.typeName}}
                 <span class="fontawesome-reorder"></span>
@@ -38,7 +38,10 @@
                   </div>
                 </div>
               </div>
-              <a class="mrpbt" href="the-loai/{{type.typeUrl}}/1">Xem thêm</a>
+              <a class="mrpbt" href="the-loai/{{type.typeUrl}}/1" *ngIf="stories?.length > 0; else notFound">Xem thêm</a>
+              <ng-template #notFound>
+                <p class="p-not-found">Chúng tôi chưa có truyện trong thể loại {{type.typeName}}!</p>
+              </ng-template>
             </div>
           </article>
         </div>

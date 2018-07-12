@@ -3,7 +3,7 @@
     <div class="main section" id="main">
       <div class="widget Blog" id="Blog1">
         <div class="blog-posts hfeed">
-          <article class="post hentry">
+          <article class="post hentry" *ngIf="status.statusName">
             <div class="hwrap">
               <h2 class="title">
                 {{status.statusName}}

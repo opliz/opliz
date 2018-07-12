@@ -3,7 +3,7 @@
     <div class="main section" id="main">
       <div class="widget Blog" id="Blog1">
         <div class="blog-posts hfeed">
-          <article class="post hentry">
+          <article class="post hentry" *ngIf="type.typeName">
             <div class="hwrap">
               <h2 class="title">
                 {{type.typeName}}
@@ -38,7 +38,7 @@
                   </div>
                 </div>
               </div>
-              <a class="mrpbt" href="the-loai/{{type.typeUrl}}/{{index}}">Xem thêm</a>
+              <a class="mrpbt" href="the-loai/{{type.typeUrl}}/{{index}}" *ngIf="stories?.length > 0">Xem thêm</a>
             </div>
           </article>
         </div>

@@ -26,8 +26,8 @@ export class TypeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadStories();
     this.loadType();
+    this.loadStories();
   }
 
   loadStories() {
