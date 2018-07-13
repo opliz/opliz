@@ -1,6 +1,6 @@
 <div id="content-side">
   <div class="cside section" id="cside">
-    <div class="widget HTML" id="HTML1">
+    <div class="widget HTML" id="HTML1" *ngIf="chapters?.length > 0">
       <h2 class="title">
         <span class="fontawesome-reorder"></span> Top trong tuần
       </h2>
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="widget HTML" id="HTML2">
+    <div class="widget HTML" id="HTML2" *ngIf="stories?.length > 0">
       <h2 class="title">
         <span class="fontawesome-reorder"></span> Truyện tranh mới
       </h2>
